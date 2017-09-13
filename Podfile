@@ -11,6 +11,7 @@ target 'WannaWatch' do
   pod 'Alamofire'
   pod 'RxAlamofire'
   pod 'SwiftyJSON'
+  pod 'RealmSwift'
 
   target 'WannaWatchTests' do
     inherit! :search_paths
