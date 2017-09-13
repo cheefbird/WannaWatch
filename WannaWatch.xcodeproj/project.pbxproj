@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		062149FF1F68BF52007497AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062149FE1F68BF52007497AB /* AppDelegate.swift */; };
-		06214A011F68BF52007497AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06214A001F68BF52007497AB /* ViewController.swift */; };
 		06214A041F68BF52007497AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06214A021F68BF52007497AB /* Main.storyboard */; };
 		06214A061F68BF52007497AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06214A051F68BF52007497AB /* Assets.xcassets */; };
 		06214A091F68BF52007497AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06214A071F68BF52007497AB /* LaunchScreen.storyboard */; };
 		06214A141F68BF52007497AB /* WannaWatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06214A131F68BF52007497AB /* WannaWatchTests.swift */; };
+		403753B20017E3DF675B6786 /* Pods_WannaWatchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 182E3509FA9266D6873E5731 /* Pods_WannaWatchTests.framework */; };
+		C59CCD000BAF009FBBCDC5B3 /* Pods_WannaWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A02D4880BD91C9A33EDE3AAC /* Pods_WannaWatch.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +29,6 @@
 /* Begin PBXFileReference section */
 		062149FB1F68BF52007497AB /* WannaWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WannaWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		062149FE1F68BF52007497AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		06214A001F68BF52007497AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		06214A031F68BF52007497AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		06214A051F68BF52007497AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06214A081F68BF52007497AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +36,12 @@
 		06214A0F1F68BF52007497AB /* WannaWatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WannaWatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		06214A131F68BF52007497AB /* WannaWatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WannaWatchTests.swift; sourceTree = "<group>"; };
 		06214A151F68BF52007497AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		182E3509FA9266D6873E5731 /* Pods_WannaWatchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WannaWatchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A4BDB391D13DF10F1362592 /* Pods-WannaWatch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WannaWatch.release.xcconfig"; path = "Pods/Target Support Files/Pods-WannaWatch/Pods-WannaWatch.release.xcconfig"; sourceTree = "<group>"; };
+		7A6696FCB82F45FCB113872D /* Pods-WannaWatch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WannaWatch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WannaWatch/Pods-WannaWatch.debug.xcconfig"; sourceTree = "<group>"; };
+		A02D4880BD91C9A33EDE3AAC /* Pods_WannaWatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WannaWatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C75CBF464B2F24A9AD517257 /* Pods-WannaWatchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WannaWatchTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WannaWatchTests/Pods-WannaWatchTests.release.xcconfig"; sourceTree = "<group>"; };
+		CF8EE5DD5CBB73F2BA6C9326 /* Pods-WannaWatchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WannaWatchTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WannaWatchTests/Pods-WannaWatchTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C59CCD000BAF009FBBCDC5B3 /* Pods_WannaWatch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +57,61 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				403753B20017E3DF675B6786 /* Pods_WannaWatchTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		061D81F41F68CC15003CADF2 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				06214A021F68BF52007497AB /* Main.storyboard */,
+				06214A071F68BF52007497AB /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		061D81F51F68CC25003CADF2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				061D81F71F68CD0C003CADF2 /* MovieListView */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		061D81F61F68CC36003CADF2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				06214A051F68BF52007497AB /* Assets.xcassets */,
+				06214A0A1F68BF52007497AB /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		061D81F71F68CD0C003CADF2 /* MovieListView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MovieListView;
+			sourceTree = "<group>";
+		};
+		061D81F81F68CD26003CADF2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		062149F21F68BF52007497AB = {
 			isa = PBXGroup;
 			children = (
 				062149FD1F68BF52007497AB /* WannaWatch */,
 				06214A121F68BF52007497AB /* WannaWatchTests */,
 				062149FC1F68BF52007497AB /* Products */,
+				5C05235D42AEB5C9611D3FFB /* Pods */,
+				4604086CD493AD37F2EB665E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,12 +127,11 @@
 		062149FD1F68BF52007497AB /* WannaWatch */ = {
 			isa = PBXGroup;
 			children = (
+				061D81F81F68CD26003CADF2 /* Models */,
 				062149FE1F68BF52007497AB /* AppDelegate.swift */,
-				06214A001F68BF52007497AB /* ViewController.swift */,
-				06214A021F68BF52007497AB /* Main.storyboard */,
-				06214A051F68BF52007497AB /* Assets.xcassets */,
-				06214A071F68BF52007497AB /* LaunchScreen.storyboard */,
-				06214A0A1F68BF52007497AB /* Info.plist */,
+				061D81F51F68CC25003CADF2 /* ViewControllers */,
+				061D81F41F68CC15003CADF2 /* Storyboards */,
+				061D81F61F68CC36003CADF2 /* Supporting Files */,
 			);
 			path = WannaWatch;
 			sourceTree = "<group>";
@@ -96,6 +145,26 @@
 			path = WannaWatchTests;
 			sourceTree = "<group>";
 		};
+		4604086CD493AD37F2EB665E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A02D4880BD91C9A33EDE3AAC /* Pods_WannaWatch.framework */,
+				182E3509FA9266D6873E5731 /* Pods_WannaWatchTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5C05235D42AEB5C9611D3FFB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7A6696FCB82F45FCB113872D /* Pods-WannaWatch.debug.xcconfig */,
+				2A4BDB391D13DF10F1362592 /* Pods-WannaWatch.release.xcconfig */,
+				CF8EE5DD5CBB73F2BA6C9326 /* Pods-WannaWatchTests.debug.xcconfig */,
+				C75CBF464B2F24A9AD517257 /* Pods-WannaWatchTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 06214A181F68BF52007497AB /* Build configuration list for PBXNativeTarget "WannaWatch" */;
 			buildPhases = (
+				77FA1D8EE61FCE10B45ED04F /* [CP] Check Pods Manifest.lock */,
 				062149F71F68BF52007497AB /* Sources */,
 				062149F81F68BF52007497AB /* Frameworks */,
 				062149F91F68BF52007497AB /* Resources */,
+				F5D38E71C6B34E63D63FB28C /* [CP] Embed Pods Frameworks */,
+				E9BF2FCA6A70D1D0DE709587 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -120,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 06214A1B1F68BF52007497AB /* Build configuration list for PBXNativeTarget "WannaWatchTests" */;
 			buildPhases = (
+				4932333AF9A33FDE0CD56E9F /* [CP] Check Pods Manifest.lock */,
 				06214A0B1F68BF52007497AB /* Sources */,
 				06214A0C1F68BF52007497AB /* Frameworks */,
 				06214A0D1F68BF52007497AB /* Resources */,
+				72118BD179A212DD2F6A8820 /* [CP] Embed Pods Frameworks */,
+				BD3421A8399C068E0B8BE921 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,12 +269,128 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4932333AF9A33FDE0CD56E9F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WannaWatchTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72118BD179A212DD2F6A8820 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WannaWatchTests/Pods-WannaWatchTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WannaWatchTests/Pods-WannaWatchTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77FA1D8EE61FCE10B45ED04F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WannaWatch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD3421A8399C068E0B8BE921 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WannaWatchTests/Pods-WannaWatchTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9BF2FCA6A70D1D0DE709587 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WannaWatch/Pods-WannaWatch-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5D38E71C6B34E63D63FB28C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WannaWatch/Pods-WannaWatch-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WannaWatch/Pods-WannaWatch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		062149F71F68BF52007497AB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06214A011F68BF52007497AB /* ViewController.swift in Sources */,
 				062149FF1F68BF52007497AB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,7 +481,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -341,7 +532,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -351,36 +542,43 @@
 		};
 		06214A191F68BF52007497AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A6696FCB82F45FCB113872D /* Pods-WannaWatch.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WA3KPNE52J;
 				INFOPLIST_FILE = WannaWatch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fbreidenbach.WannaWatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		06214A1A1F68BF52007497AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A4BDB391D13DF10F1362592 /* Pods-WannaWatch.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WA3KPNE52J;
 				INFOPLIST_FILE = WannaWatch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fbreidenbach.WannaWatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		06214A1C1F68BF52007497AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF8EE5DD5CBB73F2BA6C9326 /* Pods-WannaWatchTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -390,7 +588,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fbreidenbach.WannaWatchTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WannaWatch.app/WannaWatch";
 			};
@@ -398,6 +596,7 @@
 		};
 		06214A1D1F68BF52007497AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C75CBF464B2F24A9AD517257 /* Pods-WannaWatchTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -407,7 +606,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fbreidenbach.WannaWatchTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WannaWatch.app/WannaWatch";
 			};
