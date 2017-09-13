@@ -1,0 +1,449 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		062149FF1F68BF52007497AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062149FE1F68BF52007497AB /* AppDelegate.swift */; };
+		06214A011F68BF52007497AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06214A001F68BF52007497AB /* ViewController.swift */; };
+		06214A041F68BF52007497AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06214A021F68BF52007497AB /* Main.storyboard */; };
+		06214A061F68BF52007497AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06214A051F68BF52007497AB /* Assets.xcassets */; };
+		06214A091F68BF52007497AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06214A071F68BF52007497AB /* LaunchScreen.storyboard */; };
+		06214A141F68BF52007497AB /* WannaWatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06214A131F68BF52007497AB /* WannaWatchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		06214A101F68BF52007497AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 062149F31F68BF52007497AB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 062149FA1F68BF52007497AB;
+			remoteInfo = WannaWatch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		062149FB1F68BF52007497AB /* WannaWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WannaWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		062149FE1F68BF52007497AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		06214A001F68BF52007497AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		06214A031F68BF52007497AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		06214A051F68BF52007497AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		06214A081F68BF52007497AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		06214A0A1F68BF52007497AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06214A0F1F68BF52007497AB /* WannaWatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WannaWatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		06214A131F68BF52007497AB /* WannaWatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WannaWatchTests.swift; sourceTree = "<group>"; };
+		06214A151F68BF52007497AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		062149F81F68BF52007497AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06214A0C1F68BF52007497AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		062149F21F68BF52007497AB = {
+			isa = PBXGroup;
+			children = (
+				062149FD1F68BF52007497AB /* WannaWatch */,
+				06214A121F68BF52007497AB /* WannaWatchTests */,
+				062149FC1F68BF52007497AB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		062149FC1F68BF52007497AB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				062149FB1F68BF52007497AB /* WannaWatch.app */,
+				06214A0F1F68BF52007497AB /* WannaWatchTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		062149FD1F68BF52007497AB /* WannaWatch */ = {
+			isa = PBXGroup;
+			children = (
+				062149FE1F68BF52007497AB /* AppDelegate.swift */,
+				06214A001F68BF52007497AB /* ViewController.swift */,
+				06214A021F68BF52007497AB /* Main.storyboard */,
+				06214A051F68BF52007497AB /* Assets.xcassets */,
+				06214A071F68BF52007497AB /* LaunchScreen.storyboard */,
+				06214A0A1F68BF52007497AB /* Info.plist */,
+			);
+			path = WannaWatch;
+			sourceTree = "<group>";
+		};
+		06214A121F68BF52007497AB /* WannaWatchTests */ = {
+			isa = PBXGroup;
+			children = (
+				06214A131F68BF52007497AB /* WannaWatchTests.swift */,
+				06214A151F68BF52007497AB /* Info.plist */,
+			);
+			path = WannaWatchTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		062149FA1F68BF52007497AB /* WannaWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06214A181F68BF52007497AB /* Build configuration list for PBXNativeTarget "WannaWatch" */;
+			buildPhases = (
+				062149F71F68BF52007497AB /* Sources */,
+				062149F81F68BF52007497AB /* Frameworks */,
+				062149F91F68BF52007497AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WannaWatch;
+			productName = WannaWatch;
+			productReference = 062149FB1F68BF52007497AB /* WannaWatch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		06214A0E1F68BF52007497AB /* WannaWatchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06214A1B1F68BF52007497AB /* Build configuration list for PBXNativeTarget "WannaWatchTests" */;
+			buildPhases = (
+				06214A0B1F68BF52007497AB /* Sources */,
+				06214A0C1F68BF52007497AB /* Frameworks */,
+				06214A0D1F68BF52007497AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				06214A111F68BF52007497AB /* PBXTargetDependency */,
+			);
+			name = WannaWatchTests;
+			productName = WannaWatchTests;
+			productReference = 06214A0F1F68BF52007497AB /* WannaWatchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		062149F31F68BF52007497AB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Francis Breidenbach";
+				TargetAttributes = {
+					062149FA1F68BF52007497AB = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					06214A0E1F68BF52007497AB = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 062149FA1F68BF52007497AB;
+					};
+				};
+			};
+			buildConfigurationList = 062149F61F68BF52007497AB /* Build configuration list for PBXProject "WannaWatch" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 062149F21F68BF52007497AB;
+			productRefGroup = 062149FC1F68BF52007497AB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				062149FA1F68BF52007497AB /* WannaWatch */,
+				06214A0E1F68BF52007497AB /* WannaWatchTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		062149F91F68BF52007497AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06214A091F68BF52007497AB /* LaunchScreen.storyboard in Resources */,
+				06214A061F68BF52007497AB /* Assets.xcassets in Resources */,
+				06214A041F68BF52007497AB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06214A0D1F68BF52007497AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		062149F71F68BF52007497AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06214A011F68BF52007497AB /* ViewController.swift in Sources */,
+				062149FF1F68BF52007497AB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06214A0B1F68BF52007497AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06214A141F68BF52007497AB /* WannaWatchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		06214A111F68BF52007497AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 062149FA1F68BF52007497AB /* WannaWatch */;
+			targetProxy = 06214A101F68BF52007497AB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		06214A021F68BF52007497AB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06214A031F68BF52007497AB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		06214A071F68BF52007497AB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06214A081F68BF52007497AB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		06214A161F68BF52007497AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		06214A171F68BF52007497AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		06214A191F68BF52007497AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WA3KPNE52J;
+				INFOPLIST_FILE = WannaWatch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fbreidenbach.WannaWatch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		06214A1A1F68BF52007497AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WA3KPNE52J;
+				INFOPLIST_FILE = WannaWatch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fbreidenbach.WannaWatch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		06214A1C1F68BF52007497AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WA3KPNE52J;
+				INFOPLIST_FILE = WannaWatchTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fbreidenbach.WannaWatchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WannaWatch.app/WannaWatch";
+			};
+			name = Debug;
+		};
+		06214A1D1F68BF52007497AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WA3KPNE52J;
+				INFOPLIST_FILE = WannaWatchTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fbreidenbach.WannaWatchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WannaWatch.app/WannaWatch";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		062149F61F68BF52007497AB /* Build configuration list for PBXProject "WannaWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06214A161F68BF52007497AB /* Debug */,
+				06214A171F68BF52007497AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		06214A181F68BF52007497AB /* Build configuration list for PBXNativeTarget "WannaWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06214A191F68BF52007497AB /* Debug */,
+				06214A1A1F68BF52007497AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		06214A1B1F68BF52007497AB /* Build configuration list for PBXNativeTarget "WannaWatchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06214A1C1F68BF52007497AB /* Debug */,
+				06214A1D1F68BF52007497AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 062149F31F68BF52007497AB /* Project object */;
+}
