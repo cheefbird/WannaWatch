@@ -6,12 +6,13 @@ target 'WannaWatch' do
   use_frameworks!
 
   # Pods for WannaWatch
-  pod 'RxSwift'
-  pod 'RxCocoa'
+  pod 'RxSwift', :inhibit_warnings => true
+  pod 'RxCocoa', :inhibit_warnings => true
   pod 'Alamofire'
-  pod 'RxAlamofire'
   pod 'SwiftyJSON'
   pod 'RealmSwift'
+  pod 'Moya'
+  pod 'Moya/RxSwift'
 
   target 'WannaWatchTests' do
     inherit! :search_paths
