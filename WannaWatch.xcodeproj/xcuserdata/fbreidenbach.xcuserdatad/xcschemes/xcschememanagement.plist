@@ -7,7 +7,20 @@
 		<key>WannaWatch.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>11</integer>
+			<integer>12</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>062149FA1F68BF52007497AB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>06214A0E1F68BF52007497AB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
