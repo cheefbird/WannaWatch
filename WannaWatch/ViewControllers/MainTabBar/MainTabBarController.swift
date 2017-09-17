@@ -15,7 +15,7 @@ class MainTabBarController: UITabBarController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    
+    setMovieListVM()
     
   }
   
@@ -23,6 +23,29 @@ class MainTabBarController: UITabBarController {
     super.didReceiveMemoryWarning()
   }
   
+  
+  // MARK: - Setup on First Load
+  
+  private func setMovieListVM() {
+    
+    guard let navController = self.viewControllers?[0] as? UINavigationController else {
+      print("TabController Error: Unable to set self.VC's[0] and cast")
+      return
+    }
+    
+    guard let movieListVC = navController.childViewControllers.first as? MovieListViewController
+      else {
+        print("TabController Error: Couldn't set movie list vc using navCtonrollers.children.first")
+        return
+    }
+    
+    var movieListVM = MovieListViewViewModel()
+    movieListVM.status = "Ready"
+    
+    movieListVC.viewModel = movieListVM
+    print("MovieListVM set")
+    
+  }
   
   
   // MARK: - Navigation

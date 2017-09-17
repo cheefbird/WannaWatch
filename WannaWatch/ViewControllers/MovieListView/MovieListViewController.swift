@@ -16,8 +16,14 @@ class MovieListViewController: UIViewController {
   @IBOutlet weak var tableView: UITableView!
   
   
+  // MARK: - Properties
+  
+  var viewModel: MovieListViewViewModel!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    print(self.viewModel.status)
     
   }
 }

@@ -60,7 +60,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="154" id="vJr-LR-Vl7" customClass="MovieListTableViewCell" customModule="WannaWatch" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MovieCell" rowHeight="154" id="vJr-LR-Vl7" customClass="MovieListTableViewCell" customModule="WannaWatch" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="154"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vJr-LR-Vl7" id="zmQ-tq-yMZ">
@@ -117,8 +117,8 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="qPl-Mx-CBw" id="vOb-Xt-gb8"/>
-                                    <outlet property="delegate" destination="qPl-Mx-CBw" id="Ab9-Xj-tPH"/>
+                                    <outlet property="dataSource" destination="jXa-gg-nex" id="A6P-m7-gSI"/>
+                                    <outlet property="delegate" destination="jXa-gg-nex" id="XsK-AA-HYG"/>
                                 </connections>
                             </tableView>
                         </subviews>
