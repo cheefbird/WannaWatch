@@ -47,17 +47,19 @@ class Movie: Object {
   
   
   // MARK: - Computed Properties
-  
+  var placeholderImage: UIImage {
+    return #imageLiteral(resourceName: "placeholder")
+  }
   
   
   // MARK: - Methods
   
-  func formattedReleaseDate(_ date: String) -> Date {
+  func formattedReleaseDate() -> Date {
     
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "yyyy-MM-dd"
     
-    guard let releaseDate = dateFormatter.date(from: date) else { return Date() }
+    guard let releaseDate = dateFormatter.date(from: releaseDate) else { return Date() }
     
     return releaseDate
     
