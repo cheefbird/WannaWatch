@@ -42,7 +42,11 @@ extension MovieListViewController: UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
-    return UITableViewCell()
+    let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieListTableViewCell
+    
+    cell.configureEmpty()
+    
+    return cell
     
   }
   
