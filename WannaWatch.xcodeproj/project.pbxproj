@@ -14,6 +14,7 @@
 		06214A141F68BF52007497AB /* WannaWatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06214A131F68BF52007497AB /* WannaWatchTests.swift */; };
 		0697A7C61F6DFAD800BE78DB /* MovieListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0697A7C51F6DFAD800BE78DB /* MovieListTableViewCell.swift */; };
 		0697A7C91F6DFCD300BE78DB /* RequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0697A7C81F6DFCD300BE78DB /* RequestRouter.swift */; };
+		0697A7CC1F6E3E5E00BE78DB /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0697A7CB1F6E3E5E00BE78DB /* MainTabBarController.swift */; };
 		06D3C6651F68D00700AF38D8 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D3C6641F68D00700AF38D8 /* Movie.swift */; };
 		06E2C7251F6DFA66003A28DE /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E2C7241F6DFA66003A28DE /* MovieListViewController.swift */; };
 		37AB2962D5AA138F26FE6B1E /* Pods_WannaWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6DE5F9EEF05E703DDE2C43 /* Pods_WannaWatch.framework */; };
@@ -42,6 +43,7 @@
 		06214A151F68BF52007497AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0697A7C51F6DFAD800BE78DB /* MovieListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListTableViewCell.swift; sourceTree = "<group>"; };
 		0697A7C81F6DFCD300BE78DB /* RequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestRouter.swift; sourceTree = "<group>"; };
+		0697A7CB1F6E3E5E00BE78DB /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		06D3C6641F68D00700AF38D8 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		06E2C7241F6DFA66003A28DE /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
 		154D84E97EE4680F9CD15E71 /* Pods-WannaWatch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WannaWatch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WannaWatch/Pods-WannaWatch.debug.xcconfig"; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 		061D81F51F68CC25003CADF2 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0697A7CA1F6E3E3300BE78DB /* MainTabBar */,
 				061D81F71F68CD0C003CADF2 /* MovieListView */,
 			);
 			path = ViewControllers;
@@ -138,8 +141,8 @@
 		062149FD1F68BF52007497AB /* WannaWatch */ = {
 			isa = PBXGroup;
 			children = (
-				0697A7C71F6DFCA300BE78DB /* API */,
 				062149FE1F68BF52007497AB /* AppDelegate.swift */,
+				0697A7C71F6DFCA300BE78DB /* API */,
 				061D81F81F68CD26003CADF2 /* Models */,
 				061D81F51F68CC25003CADF2 /* ViewControllers */,
 				061D81F41F68CC15003CADF2 /* Storyboards */,
@@ -163,6 +166,14 @@
 				0697A7C81F6DFCD300BE78DB /* RequestRouter.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		0697A7CA1F6E3E3300BE78DB /* MainTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				0697A7CB1F6E3E5E00BE78DB /* MainTabBarController.swift */,
+			);
+			path = MainTabBar;
 			sourceTree = "<group>";
 		};
 		19B62D4AC2A2FB4F364A3704 /* Pods */ = {
@@ -419,6 +430,7 @@
 			files = (
 				0697A7C91F6DFCD300BE78DB /* RequestRouter.swift in Sources */,
 				06E2C7251F6DFA66003A28DE /* MovieListViewController.swift in Sources */,
+				0697A7CC1F6E3E5E00BE78DB /* MainTabBarController.swift in Sources */,
 				06D3C6651F68D00700AF38D8 /* Movie.swift in Sources */,
 				0697A7C61F6DFAD800BE78DB /* MovieListTableViewCell.swift in Sources */,
 				062149FF1F68BF52007497AB /* AppDelegate.swift in Sources */,
