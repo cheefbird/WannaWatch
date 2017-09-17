@@ -35,7 +35,7 @@ class Movie: Object {
     releaseDate = json["release_date"].stringValue
     id = json["id"].intValue
     backdropPath = json["backdrop_path"].stringValue
-    score = json["popularity"].floatValue
+    score = json["vote_average"].floatValue
   }
   
   

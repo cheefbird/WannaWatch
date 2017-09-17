@@ -13,7 +13,8 @@ class MovieListTableViewCell: UITableViewCell {
   // MARK: - Outlets
   
   @IBOutlet weak var titleLabel: UILabel!
-  @IBOutlet weak var summaryLabel: UILabel!
+  @IBOutlet weak var releaseDateLabel: UILabel!
+  @IBOutlet weak var scoreLabel: UILabel!
   @IBOutlet weak var posterImageView: UIImageView!
   
   override func awakeFromNib() {
