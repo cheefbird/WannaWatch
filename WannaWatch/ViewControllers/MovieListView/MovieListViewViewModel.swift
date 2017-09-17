@@ -7,10 +7,20 @@
 //
 
 import Foundation
+import RxSwift
+import RealmSwift
 
 
-struct MovieListViewViewModel {
+class MovieListViewViewModel {
+  
+  // MARK: - Properties
   
   var status = "Not Ready"
   
+  
+  // MARK: - Methods
+  
+  
+  
 }
+
