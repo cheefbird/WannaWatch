@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class MovieListTableViewCell: UITableViewCell {
   
   // MARK: - Outlets
@@ -17,15 +18,24 @@ class MovieListTableViewCell: UITableViewCell {
   @IBOutlet weak var scoreLabel: UILabel!
   @IBOutlet weak var posterImageView: UIImageView!
   
-  override func awakeFromNib() {
-    super.awakeFromNib()
-    // Initialization code
+  
+  // MARK: - Configure
+  
+  func configure(withMovie movie: Movie) {
+    titleLabel.text = movie.title
+    releaseDateLabel.text = movie.releaseDate
+    let percentScore = movie.score * 10
+    scoreLabel.text = "Vote score: \(percentScore)"
+    posterImageView.image = movie.placeholderImage
+    
   }
   
-  override func setSelected(_ selected: Bool, animated: Bool) {
-    super.setSelected(selected, animated: animated)
-    
-    // Configure the view for the selected state
+  
+  func configureEmpty() {
+    titleLabel.text = "Some Super Terrible Movie Name"
+    releaseDateLabel.text = "2017-09-07"
+    scoreLabel.text = "Vote score: 90.0"
+    posterImageView.image = #imageLiteral(resourceName: "placeholder")
   }
   
 }
