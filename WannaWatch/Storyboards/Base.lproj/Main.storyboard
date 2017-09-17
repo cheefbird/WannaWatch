@@ -8,7 +8,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -50,37 +49,19 @@
             </objects>
             <point key="canvasLocation" x="-734" y="379"/>
         </scene>
-        <!--View Controller-->
+        <!--Movie List View Controller-->
         <scene sceneID="Arq-lB-qon">
             <objects>
-                <viewController id="jXa-gg-nex" sceneMemberID="viewController">
+                <viewController id="jXa-gg-nex" customClass="MovieListViewController" customModule="WannaWatch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qPl-Mx-CBw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k5P-gI-1Fn">
-                                <rect key="frame" x="0.0" y="64" width="375" height="39"/>
-                                <subviews>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="JQP-yx-ECL">
-                                        <rect key="frame" x="118" y="5.5" width="139" height="29"/>
-                                        <segments>
-                                            <segment title="All"/>
-                                            <segment title="Favorites"/>
-                                        </segments>
-                                    </segmentedControl>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="JQP-yx-ECL" firstAttribute="centerX" secondItem="k5P-gI-1Fn" secondAttribute="centerX" id="CUM-Rs-2Vf"/>
-                                    <constraint firstAttribute="height" secondItem="JQP-yx-ECL" secondAttribute="height" multiplier="1.4" id="CaA-ga-4qS"/>
-                                    <constraint firstItem="JQP-yx-ECL" firstAttribute="centerY" secondItem="k5P-gI-1Fn" secondAttribute="centerY" id="pQv-2h-YGe"/>
-                                </constraints>
-                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="me6-I8-lTS">
-                                <rect key="frame" x="0.0" y="103" width="375" height="515"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="198" id="vqT-V6-jKQ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="198" id="vqT-V6-jKQ" customClass="MovieListTableViewCell" customModule="WannaWatch" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="198"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vqT-V6-jKQ" id="7ea-9W-cMN">
@@ -119,6 +100,11 @@
                                                 <constraint firstItem="dE3-7E-UU9" firstAttribute="leading" secondItem="7ea-9W-cMN" secondAttribute="leadingMargin" id="yoS-9b-TXZ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="posterImageView" destination="dE3-7E-UU9" id="dzv-Qi-ZZb"/>
+                                            <outlet property="summaryLabel" destination="dzl-ip-t9y" id="xRq-qs-VKB"/>
+                                            <outlet property="titleLabel" destination="3lJ-Ze-LFd" id="IGq-as-Bw3"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -127,15 +113,25 @@
                         <constraints>
                             <constraint firstItem="iaj-vj-DAh" firstAttribute="bottom" secondItem="me6-I8-lTS" secondAttribute="bottom" id="74v-Qd-wLI"/>
                             <constraint firstItem="iaj-vj-DAh" firstAttribute="trailing" secondItem="me6-I8-lTS" secondAttribute="trailing" id="MBy-PL-kqV"/>
+                            <constraint firstItem="me6-I8-lTS" firstAttribute="top" secondItem="iaj-vj-DAh" secondAttribute="top" id="OK4-bR-9J9"/>
                             <constraint firstItem="me6-I8-lTS" firstAttribute="leading" secondItem="iaj-vj-DAh" secondAttribute="leading" id="PP0-iL-TcA"/>
-                            <constraint firstItem="iaj-vj-DAh" firstAttribute="trailing" secondItem="k5P-gI-1Fn" secondAttribute="trailing" id="T2E-cA-J0w"/>
-                            <constraint firstItem="me6-I8-lTS" firstAttribute="top" secondItem="k5P-gI-1Fn" secondAttribute="bottom" id="eyL-n1-RJX"/>
-                            <constraint firstItem="k5P-gI-1Fn" firstAttribute="top" secondItem="iaj-vj-DAh" secondAttribute="top" id="gis-fQ-pri"/>
-                            <constraint firstItem="k5P-gI-1Fn" firstAttribute="leading" secondItem="iaj-vj-DAh" secondAttribute="leading" id="hlp-NM-BRU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iaj-vj-DAh"/>
                     </view>
-                    <navigationItem key="navigationItem" id="cah-2W-ldg"/>
+                    <navigationItem key="navigationItem" id="cah-2W-ldg">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" id="JQP-yx-ECL">
+                            <rect key="frame" x="118" y="7.5" width="139" height="29"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="All"/>
+                                <segment title="Favorites"/>
+                            </segments>
+                        </segmentedControl>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="segmentedControl" destination="JQP-yx-ECL" id="ncg-RL-pSH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Is9-1t-grx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

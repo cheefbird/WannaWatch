@@ -12,7 +12,10 @@
 		06214A061F68BF52007497AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06214A051F68BF52007497AB /* Assets.xcassets */; };
 		06214A091F68BF52007497AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06214A071F68BF52007497AB /* LaunchScreen.storyboard */; };
 		06214A141F68BF52007497AB /* WannaWatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06214A131F68BF52007497AB /* WannaWatchTests.swift */; };
+		0697A7C61F6DFAD800BE78DB /* MovieListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0697A7C51F6DFAD800BE78DB /* MovieListTableViewCell.swift */; };
+		0697A7C91F6DFCD300BE78DB /* RequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0697A7C81F6DFCD300BE78DB /* RequestRouter.swift */; };
 		06D3C6651F68D00700AF38D8 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D3C6641F68D00700AF38D8 /* Movie.swift */; };
+		06E2C7251F6DFA66003A28DE /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E2C7241F6DFA66003A28DE /* MovieListViewController.swift */; };
 		37AB2962D5AA138F26FE6B1E /* Pods_WannaWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6DE5F9EEF05E703DDE2C43 /* Pods_WannaWatch.framework */; };
 		D63917C19FCB4EC24E54085E /* Pods_WannaWatchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A44C12F4430D9197180DC5DE /* Pods_WannaWatchTests.framework */; };
 /* End PBXBuildFile section */
@@ -37,7 +40,10 @@
 		06214A0F1F68BF52007497AB /* WannaWatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WannaWatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		06214A131F68BF52007497AB /* WannaWatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WannaWatchTests.swift; sourceTree = "<group>"; };
 		06214A151F68BF52007497AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0697A7C51F6DFAD800BE78DB /* MovieListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListTableViewCell.swift; sourceTree = "<group>"; };
+		0697A7C81F6DFCD300BE78DB /* RequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestRouter.swift; sourceTree = "<group>"; };
 		06D3C6641F68D00700AF38D8 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		06E2C7241F6DFA66003A28DE /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
 		154D84E97EE4680F9CD15E71 /* Pods-WannaWatch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WannaWatch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WannaWatch/Pods-WannaWatch.debug.xcconfig"; sourceTree = "<group>"; };
 		38ECB1957B12D1012090852E /* Pods-WannaWatchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WannaWatchTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WannaWatchTests/Pods-WannaWatchTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3B6DE5F9EEF05E703DDE2C43 /* Pods_WannaWatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WannaWatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +101,8 @@
 		061D81F71F68CD0C003CADF2 /* MovieListView */ = {
 			isa = PBXGroup;
 			children = (
+				06E2C7241F6DFA66003A28DE /* MovieListViewController.swift */,
+				0697A7C51F6DFAD800BE78DB /* MovieListTableViewCell.swift */,
 			);
 			path = MovieListView;
 			sourceTree = "<group>";
@@ -130,6 +138,7 @@
 		062149FD1F68BF52007497AB /* WannaWatch */ = {
 			isa = PBXGroup;
 			children = (
+				0697A7C71F6DFCA300BE78DB /* API */,
 				062149FE1F68BF52007497AB /* AppDelegate.swift */,
 				061D81F81F68CD26003CADF2 /* Models */,
 				061D81F51F68CC25003CADF2 /* ViewControllers */,
@@ -146,6 +155,14 @@
 				06214A151F68BF52007497AB /* Info.plist */,
 			);
 			path = WannaWatchTests;
+			sourceTree = "<group>";
+		};
+		0697A7C71F6DFCA300BE78DB /* API */ = {
+			isa = PBXGroup;
+			children = (
+				0697A7C81F6DFCD300BE78DB /* RequestRouter.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		19B62D4AC2A2FB4F364A3704 /* Pods */ = {
@@ -400,7 +417,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0697A7C91F6DFCD300BE78DB /* RequestRouter.swift in Sources */,
+				06E2C7251F6DFA66003A28DE /* MovieListViewController.swift in Sources */,
 				06D3C6651F68D00700AF38D8 /* Movie.swift in Sources */,
+				0697A7C61F6DFAD800BE78DB /* MovieListTableViewCell.swift in Sources */,
 				062149FF1F68BF52007497AB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
