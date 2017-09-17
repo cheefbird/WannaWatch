@@ -13,6 +13,12 @@ class MovieListViewController: UIViewController {
   // MARK: - Outlets
   
   @IBOutlet weak var tableView: UITableView!
+  
+  
+  // MARK: - Properties
+  
+  
+  
 
     override func viewDidLoad() {
         super.viewDidLoad()

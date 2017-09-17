@@ -1,5 +1,5 @@
 //
-//  MovieService.swift
+//  MoviesTarget.swift
 //  WannaWatch
 //
 //  Created by Francis Breidenbach on 9/12/17.
@@ -10,14 +10,14 @@ import Foundation
 import Moya
 
 
-enum MovieDB {
+enum MoviesTarget {
   
-  case getMovies
+  case getMovies(page: Int)
   
 }
 
 
-extension MovieDB: TargetType {
+extension MoviesTarget: TargetType {
   
   var baseURL: URL { return URL(string: "https://api.themoviedb.org/3/")! }
   
@@ -44,12 +44,14 @@ extension MovieDB: TargetType {
   
   var task: Task {
     switch self {
-    case .getMovies:
+    case .getMovies(let page):
       var params = [String: Any]()
       
+      params["api_key"] = "7e6576c1d12633c8fd1eee0cb2e995ed"
       params["include_adult"] = false
       params["include_video"] = false
       params["sort_by"] = "popularity.desc"
+      params["page"] = page
       
       return .requestParameters(parameters: params, encoding: URLEncoding.default)
     }
@@ -64,7 +66,7 @@ extension MovieDB: TargetType {
 
 
 
-extension MovieDB {
+extension MoviesTarget {
   
   fileprivate func jsonToSample(fileName: String) -> Data? {
     
