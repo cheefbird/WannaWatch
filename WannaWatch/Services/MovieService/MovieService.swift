@@ -57,13 +57,23 @@ struct MovieService: MovieServiceType {
   
   
   func movies() -> Observable<Results<Movie>> {
-    <#code#>
+    let results = withRealm("retrieve movies") { realm -> Observable<Results<Movie>> in
+      let movies = realm.objects(Movie.self)
+      return Observable.just(movies)
+    }
+    return results ?? .empty()
   }
   
   
   @discardableResult
   func toggleFavorite(movie: Movie) -> Observable<Movie> {
-    <#code#>
+    let result = withRealm("toggling favorite") { realm -> Observable<Movie> in
+      try realm.write {
+        movie.isFavorite = !movie.isFavorite
+      }
+      return .just(movie)
+    }
+    return result ?? .error(MovieServiceError.toggleFavoriteFailed(movie))
   }
   
   
