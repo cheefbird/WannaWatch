@@ -10,8 +10,10 @@ target 'WannaWatch' do
   pod 'RxCocoa', :inhibit_warnings => true
   pod 'Alamofire'
   pod 'RxAlamofire'
+  pod 'RxRealm'
   pod 'SwiftyJSON'
   pod 'RealmSwift'
+  pod 'Action'
 
   target 'WannaWatchTests' do
     inherit! :search_paths
