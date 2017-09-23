@@ -22,6 +22,7 @@ class Movie: Object {
   dynamic var id = 0
   dynamic var backdropPath = ""
   dynamic var score: Float = 0.0
+  dynamic var isFavorite = false
   
   
   // MARK: - Init
