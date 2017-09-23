@@ -39,7 +39,7 @@ class MainTabBarController: UITabBarController {
         return
     }
     
-    var movieListVM = MovieListViewViewModel()
+    let movieListVM = MovieListViewViewModel()
     movieListVM.status = "Ready"
     
     movieListVC.viewModel = movieListVM
