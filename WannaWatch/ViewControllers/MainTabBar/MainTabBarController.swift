@@ -39,7 +39,8 @@ class MainTabBarController: UITabBarController {
         return
     }
     
-    let movieListVM = MovieListViewViewModel()
+    let movieService = MovieService()
+    let movieListVM = MovieListViewViewModel(movieService: movieService)
     
     movieListVC.viewModel = movieListVM
     print("MovieListVM set")

@@ -11,12 +11,18 @@ import RxSwift
 import RealmSwift
 
 
-class MovieListViewViewModel {
+struct MovieListViewViewModel {
   
   // MARK: - Properties
   
+  let movieService: MovieServiceType
+  
   
   // MARK: - Init
+  
+  init(movieService: MovieServiceType) {
+    self.movieService = movieService
+  }
   
   
   // MARK: - Methods

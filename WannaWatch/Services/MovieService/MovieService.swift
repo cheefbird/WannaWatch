@@ -30,6 +30,27 @@ struct MovieService: MovieServiceType {
   }
   
   
+  func movies() -> Observable<Results<Movie>> {
+    let results = withRealm("retrieve movies") { realm -> Observable<Results<Movie>> in
+      let movies = realm.objects(Movie.self)
+      return Observable.just(movies)
+    }
+    return results ?? .empty()
+  }
+  
+  
+  @discardableResult
+  func toggleFavorite(movie: Movie) -> Observable<Movie> {
+    let result = withRealm("toggling favorite") { realm -> Observable<Movie> in
+      try realm.write {
+        movie.isFavorite = !movie.isFavorite
+      }
+      return .just(movie)
+    }
+    return result ?? .error(MovieServiceError.toggleFavoriteFailed(movie))
+  }
+  
+  
   @discardableResult
   func fetchMovies(forPage page: Int) -> Observable<[Movie]> {
     var result = [Movie]()
@@ -56,27 +77,6 @@ struct MovieService: MovieServiceType {
   }
   
   
-  func movies() -> Observable<Results<Movie>> {
-    let results = withRealm("retrieve movies") { realm -> Observable<Results<Movie>> in
-      let movies = realm.objects(Movie.self)
-      return Observable.just(movies)
-    }
-    return results ?? .empty()
-  }
-  
-  
-  @discardableResult
-  func toggleFavorite(movie: Movie) -> Observable<Movie> {
-    let result = withRealm("toggling favorite") { realm -> Observable<Movie> in
-      try realm.write {
-        movie.isFavorite = !movie.isFavorite
-      }
-      return .just(movie)
-    }
-    return result ?? .error(MovieServiceError.toggleFavoriteFailed(movie))
-  }
-  
-  
   func saveMovies(_ movies: [Movie]) {
     let realm = try! Realm()
     try! realm.write {
@@ -85,4 +85,5 @@ struct MovieService: MovieServiceType {
       }
     }
   }
+  
 }
