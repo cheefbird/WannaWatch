@@ -25,3 +25,10 @@ protocol MovieServiceType {
   func saveMovies(_ movies: [Movie])
   
 }
+
+
+enum MovieServiceError: Error {
+  
+  case toggleFavoriteFailed(Movie)
+  
+}
