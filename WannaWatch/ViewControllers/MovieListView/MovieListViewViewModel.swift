@@ -9,6 +9,7 @@
 import Foundation
 import RxSwift
 import RealmSwift
+import RxRealm
 
 
 struct MovieListViewViewModel {
@@ -16,6 +17,13 @@ struct MovieListViewViewModel {
   // MARK: - Properties
   
   let movieService: MovieServiceType
+  
+  var movies: Observable<[Movie]> {
+    return movieService.movies()
+      .map { results in
+        return results.toArray()
+    }
+  }
   
   
   // MARK: - Init
