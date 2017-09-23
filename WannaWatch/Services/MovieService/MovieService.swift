@@ -10,6 +10,7 @@ import Foundation
 import RealmSwift
 import RxSwift
 import RxAlamofire
+import RxRealm
 import SwiftyJSON
 
 
@@ -32,8 +33,9 @@ struct MovieService: MovieServiceType {
   
   func movies() -> Observable<Results<Movie>> {
     let results = withRealm("retrieve movies") { realm -> Observable<Results<Movie>> in
+      let realm = try! Realm()
       let movies = realm.objects(Movie.self)
-      return Observable.just(movies)
+      return Observable.collection(from: movies, synchronousStart: false)
     }
     return results ?? .empty()
   }
