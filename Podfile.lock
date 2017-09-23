@@ -1,10 +1,10 @@
 PODS:
   - Alamofire (4.5.1)
-  - Realm (2.10.0):
-    - Realm/Headers (= 2.10.0)
-  - Realm/Headers (2.10.0)
-  - RealmSwift (2.10.0):
-    - Realm (= 2.10.0)
+  - Realm (2.10.1):
+    - Realm/Headers (= 2.10.1)
+  - Realm/Headers (2.10.1)
+  - RealmSwift (2.10.1):
+    - Realm (= 2.10.1)
   - RxAlamofire (3.0.3):
     - RxAlamofire/Core (= 3.0.3)
   - RxAlamofire/Core (3.0.3):
@@ -31,8 +31,8 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
-  Realm: 98b3a25643cf6b3e07d2b99fb43fe0eb9c801dec
-  RealmSwift: 34073ad3a31232bbaf7c0db898c037940284cba2
+  Realm: fc7a317a5c2c9ba91f5f235ede4e2ea76e9eba0c
+  RealmSwift: 505ed6c15942a2e76f5cfa78a8667cfa997ee75b
   RxAlamofire: 5eb39188c4917ad98127c0ecb4878a61b7517003
   RxBlocking: 4f4bd5732e8b952e54ae8a57739bcfb645de12bc
   RxCocoa: 84a08739ab186248c7f31ce4ee92d6f8a947d690
