@@ -15,18 +15,8 @@ class MovieListViewViewModel {
   
   // MARK: - Properties
   
-  var status: String {
-    didSet {
-      debugPrint("MovieListVVM status set to \(status)")
-    }
-  }
-  
   
   // MARK: - Init
-  
-  init() {
-    status = "not ready"
-  }
   
   
   // MARK: - Methods
