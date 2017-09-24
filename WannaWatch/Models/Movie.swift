@@ -25,6 +25,15 @@ class Movie: Object {
   dynamic var isFavorite = false
   
   
+  // MARK: - Image Type Enum
+  
+  enum ImageType {
+    case posterSmall
+    case posterMedium
+    case backdrop
+  }
+  
+  
   // MARK: - Init
   
   convenience init(fromJSON json: JSON) {
@@ -66,4 +75,45 @@ class Movie: Object {
     
   }
   
+  
+  func imageUrl(forType type: ImageType) -> URL {
+    
+    let baseUrl = "https://image.tmdb.org/t/p/"
+    
+    var width = 0
+    var path = ""
+    
+    switch type {
+      
+    case .posterSmall:
+      width = 92
+      path = posterPath
+      
+    case .posterMedium:
+      width = 185
+      path = posterPath
+      
+    case .backdrop:
+      width = 780
+      path = backdropPath
+      
+    }
+    
+    let imagePath = "\(baseUrl)w\(width)\(path)"
+    
+    return URL(string: imagePath)!
+    
+  }
+  
 }
+
+
+
+
+
+
+
+
+
+
+
