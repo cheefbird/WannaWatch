@@ -30,7 +30,7 @@ enum RequestRouter: URLRequestConvertible {
   var path: String {
     switch self {
     case .getMovies:
-      return "/discover/movie"
+      return "discover/movie"
     }
   }
   
@@ -43,7 +43,7 @@ enum RequestRouter: URLRequestConvertible {
   var parameters: Parameters {
     var params = Parameters()
     params["api_key"] = apiKey
-    params["sorty_by"] = "popularity.desc"
+    params["sorty_by"] = "vote_average.desc"
     params["include_adult"] = false
     params["include_video"] = false
     
