@@ -7,6 +7,11 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+import RealmSwift
+import RxRealm
+
 
 class MovieListViewController: UIViewController {
   
@@ -18,37 +23,33 @@ class MovieListViewController: UIViewController {
   
   // MARK: - Properties
   
+  let disposeBag = DisposeBag()
+  
   var viewModel: MovieListViewViewModel!
   
   override func viewDidLoad() {
     super.viewDidLoad()
-        
+    
+    viewModel.movies()
+      .bind(
+        to: tableView.rx.items(
+          cellIdentifier: "MovieCell",
+          cellType: MovieListTableViewCell.self)) { [weak self] (row, element, cell) in
+            
+//            if let count = self?.viewModel.movieCount,
+//              row > (count - 6) {
+//              let page = (count / 25) + 1
+//              self?.viewModel.loadMovies(forPage: page)
+//            }
+
+            cell.configure(withMovie: element)
+      }
+      .disposed(by: disposeBag)
+    
   }
 }
 
 
-// MARK: - TableView Data Source
-
-extension MovieListViewController: UITableViewDataSource {
-  
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    
-    // TODO: dynamic rows
-    return 5
-  }
-  
-  
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    
-    let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieListTableViewCell
-    
-    cell.configureEmpty()
-    
-    return cell
-    
-  }
-  
-}
 
 
 

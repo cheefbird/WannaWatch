@@ -20,6 +20,19 @@ struct MovieService: MovieServiceType {
   let disposeBag = DisposeBag()
   
   
+  init() {
+    do {
+      let realm = try Realm()
+      if realm.objects(Movie.self).count == 0 {
+        fetchMovies(forPage: 1)
+      }
+    } catch let error {
+      print("** ERROR in init for Movie Service **")
+      print(error.localizedDescription)
+    }
+  }
+  
+  
   fileprivate func withRealm<T>(_ operation: String, action: (Realm) throws -> T) -> T? {
     do {
       let realm = try Realm()
@@ -28,16 +41,6 @@ struct MovieService: MovieServiceType {
       print("Failed \(operation) realm with error: \(error)")
       return nil
     }
-  }
-  
-  
-  func movies() -> Observable<Results<Movie>> {
-    let results = withRealm("retrieve movies") { realm -> Observable<Results<Movie>> in
-      let realm = try! Realm()
-      let movies = realm.objects(Movie.self)
-      return Observable.collection(from: movies, synchronousStart: false)
-    }
-    return results ?? .empty()
   }
   
   
@@ -56,13 +59,25 @@ struct MovieService: MovieServiceType {
   @discardableResult
   func fetchMovies(forPage page: Int) -> Observable<[Movie]> {
     var result = [Movie]()
-    
+    debugPrint(RequestRouter.getMovies(page: 1).urlRequest?.debugDescription)
     requestJSON(RequestRouter.getMovies(page: page))
+      .debug()
       .subscribe(onNext: { (response, data) in
         guard let json = data as? [String: Any] else { return }
         guard let movies = json["results"] as? [[String: Any]] else { return }
         
         let moviesJSON = movies.map { JSON($0) }
+        
+        let realm = try! Realm()
+        try! realm.write {
+          for movie in moviesJSON {
+            
+            let newMovie = Movie(fromJSON: movie)
+            realm.add(newMovie, update: true)
+            
+          }
+        }
+
         
         for movie in moviesJSON {
           let newMovie = Movie(fromJSON: movie)
@@ -72,7 +87,7 @@ struct MovieService: MovieServiceType {
       })
       .disposed(by: disposeBag)
     
-    saveMovies(result)
+    
     
     return Observable.just(result)
     

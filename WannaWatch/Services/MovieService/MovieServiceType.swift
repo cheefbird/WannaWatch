@@ -13,8 +13,6 @@ import RealmSwift
 
 protocol MovieServiceType {
   
-  func movies() -> Observable<Results<Movie>>
-  
   @discardableResult
   func toggleFavorite(movie: Movie) -> Observable<Movie>
   

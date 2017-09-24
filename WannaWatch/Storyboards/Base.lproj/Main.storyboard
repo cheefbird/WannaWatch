@@ -95,7 +95,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="xSr-fx-NCJ" firstAttribute="top" secondItem="zmQ-tq-yMZ" secondAttribute="topMargin" id="0WT-JT-HnI"/>
-                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="Zba-4O-yFY" secondAttribute="bottom" id="9LI-oq-3Uv"/>
+                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="Zba-4O-yFY" secondAttribute="bottom" priority="750" id="9LI-oq-3Uv"/>
                                                 <constraint firstItem="xSr-fx-NCJ" firstAttribute="leading" secondItem="zmQ-tq-yMZ" secondAttribute="leadingMargin" id="Aov-aN-9HG"/>
                                                 <constraint firstItem="55v-VX-Y4T" firstAttribute="top" secondItem="zmQ-tq-yMZ" secondAttribute="top" constant="8" id="N1E-oc-ajv"/>
                                                 <constraint firstItem="55v-VX-Y4T" firstAttribute="leading" secondItem="xSr-fx-NCJ" secondAttribute="trailing" constant="8" id="azC-k2-fGc"/>
@@ -116,10 +116,6 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="jXa-gg-nex" id="A6P-m7-gSI"/>
-                                    <outlet property="delegate" destination="jXa-gg-nex" id="XsK-AA-HYG"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
