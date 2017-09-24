@@ -22,6 +22,16 @@ class Movie: Object {
   dynamic var id = 0
   dynamic var backdropPath = ""
   dynamic var score: Float = 0.0
+  dynamic var isFavorite = false
+  
+  
+  // MARK: - Image Type Enum
+  
+  enum ImageType {
+    case posterSmall
+    case posterMedium
+    case backdrop
+  }
   
   
   // MARK: - Init
@@ -35,7 +45,7 @@ class Movie: Object {
     releaseDate = json["release_date"].stringValue
     id = json["id"].intValue
     backdropPath = json["backdrop_path"].stringValue
-    score = json["popularity"].floatValue
+    score = json["vote_average"].floatValue
   }
   
   
@@ -47,20 +57,63 @@ class Movie: Object {
   
   
   // MARK: - Computed Properties
-  
+  var placeholderImage: UIImage {
+    return #imageLiteral(resourceName: "placeholder")
+  }
   
   
   // MARK: - Methods
   
-  func formattedReleaseDate(_ date: String) -> Date {
+  func formattedReleaseDate() -> Date {
     
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "yyyy-MM-dd"
     
-    guard let releaseDate = dateFormatter.date(from: date) else { return Date() }
+    guard let releaseDate = dateFormatter.date(from: releaseDate) else { return Date() }
     
     return releaseDate
     
   }
   
+  
+  func imageUrl(forType type: ImageType) -> URL {
+    
+    let baseUrl = "https://image.tmdb.org/t/p/"
+    
+    var width = 0
+    var path = ""
+    
+    switch type {
+      
+    case .posterSmall:
+      width = 92
+      path = posterPath
+      
+    case .posterMedium:
+      width = 185
+      path = posterPath
+      
+    case .backdrop:
+      width = 780
+      path = backdropPath
+      
+    }
+    
+    let imagePath = "\(baseUrl)w\(width)\(path)"
+    
+    return URL(string: imagePath)!
+    
+  }
+  
 }
+
+
+
+
+
+
+
+
+
+
+

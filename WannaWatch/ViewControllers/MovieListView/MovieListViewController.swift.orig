@@ -2,21 +2,37 @@
 //  MovieListViewController.swift
 //  WannaWatch
 //
+<<<<<<< HEAD
+//  Created by Francis Breidenbach on 9/12/17.
+=======
 //  Created by Francis Breidenbach on 9/16/17.
+>>>>>>> movie-list
 //  Copyright © 2017 Francis Breidenbach. All rights reserved.
 //
 
 import UIKit
+<<<<<<< HEAD
+=======
 import RxSwift
 import RxCocoa
 import RealmSwift
 import RxRealm
 
+>>>>>>> movie-list
 
 class MovieListViewController: UIViewController {
   
   // MARK: - Outlets
   
+<<<<<<< HEAD
+  @IBOutlet weak var tableView: UITableView!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+    }
+}
+=======
   @IBOutlet weak var segmentedControl: UISegmentedControl!
   @IBOutlet weak var tableView: UITableView!
   
@@ -56,3 +72,4 @@ class MovieListViewController: UIViewController {
 
 
 
+>>>>>>> movie-list

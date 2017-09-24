@@ -2,18 +2,39 @@
 //  MovieListTableViewCell.swift
 //  WannaWatch
 //
+<<<<<<< HEAD
+//  Created by Francis Breidenbach on 9/12/17.
+=======
 //  Created by Francis Breidenbach on 9/16/17.
+>>>>>>> movie-list
 //  Copyright © 2017 Francis Breidenbach. All rights reserved.
 //
 
 import UIKit
+<<<<<<< HEAD
+=======
 import Kingfisher
 
+>>>>>>> movie-list
 
 class MovieListTableViewCell: UITableViewCell {
   
   // MARK: - Outlets
   
+<<<<<<< HEAD
+  @IBOutlet weak var posterImage: UIImageView!
+  @IBOutlet weak var movieNameLabel: UILabel!
+  @IBOutlet weak var movieSummaryLabel: UILabel!
+  
+  
+  // MARK: - Life Cycle
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+
+=======
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var releaseDateLabel: UILabel!
   @IBOutlet weak var scoreLabel: UILabel!
@@ -39,4 +60,5 @@ class MovieListTableViewCell: UITableViewCell {
     posterImageView.image = #imageLiteral(resourceName: "placeholder")
   }
   
+>>>>>>> movie-list
 }

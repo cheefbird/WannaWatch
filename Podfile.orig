@@ -9,12 +9,19 @@ target 'WannaWatch' do
   pod 'RxSwift', :inhibit_warnings => true
   pod 'RxCocoa', :inhibit_warnings => true
   pod 'Alamofire'
+<<<<<<< HEAD
+  pod 'SwiftyJSON'
+  pod 'RealmSwift'
+  pod 'Moya'
+  pod 'Moya/RxSwift'
+=======
   pod 'RxAlamofire'
   pod 'RxRealm'
   pod 'SwiftyJSON'
   pod 'RealmSwift'
   pod 'Action'
   pod 'Kingfisher', '~> 3.13.1'
+>>>>>>> movie-list
 
   target 'WannaWatchTests' do
     inherit! :search_paths

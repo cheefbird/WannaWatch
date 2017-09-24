@@ -56,12 +56,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+<<<<<<< HEAD
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="me6-I8-lTS">
+                                <rect key="frame" x="0.0" y="103" width="375" height="515"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MovieCell" rowHeight="198" id="vqT-V6-jKQ" customClass="MovieListTableViewCell" customModule="WannaWatch" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="198"/>
+=======
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="154" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="me6-I8-lTS">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MovieCell" rowHeight="154" id="vJr-LR-Vl7" customClass="MovieListTableViewCell" customModule="WannaWatch" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="154"/>
+>>>>>>> movie-list
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vJr-LR-Vl7" id="zmQ-tq-yMZ">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="153.5"/>
@@ -109,14 +118,42 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+<<<<<<< HEAD
+                                            <outlet property="movieNameLabel" destination="3lJ-Ze-LFd" id="isR-Gi-QaF"/>
+                                            <outlet property="movieSummaryLabel" destination="dzl-ip-t9y" id="pCU-75-Hfc"/>
+                                            <outlet property="posterImage" destination="dE3-7E-UU9" id="Vyv-Nx-hGe"/>
+=======
                                             <outlet property="posterImageView" destination="xSr-fx-NCJ" id="3eY-Oq-1SR"/>
                                             <outlet property="releaseDateLabel" destination="Rjt-JS-h8M" id="Tia-N8-MTu"/>
                                             <outlet property="scoreLabel" destination="Zba-4O-yFY" id="jOJ-22-Gp3"/>
                                             <outlet property="titleLabel" destination="55v-VX-Y4T" id="dLj-k1-vBR"/>
+>>>>>>> movie-list
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="jXa-gg-nex" id="zZU-gg-nYD"/>
+                                    <outlet property="delegate" destination="jXa-gg-nex" id="XfQ-M7-dWh"/>
+                                </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k5P-gI-1Fn">
+                                <rect key="frame" x="0.0" y="64" width="375" height="39"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="JQP-yx-ECL">
+                                        <rect key="frame" x="118" y="5.5" width="139" height="29"/>
+                                        <segments>
+                                            <segment title="All"/>
+                                            <segment title="Favorites"/>
+                                        </segments>
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="JQP-yx-ECL" firstAttribute="centerX" secondItem="k5P-gI-1Fn" secondAttribute="centerX" id="CUM-Rs-2Vf"/>
+                                    <constraint firstAttribute="height" secondItem="JQP-yx-ECL" secondAttribute="height" multiplier="1.4" id="CaA-ga-4qS"/>
+                                    <constraint firstItem="JQP-yx-ECL" firstAttribute="centerY" secondItem="k5P-gI-1Fn" secondAttribute="centerY" id="pQv-2h-YGe"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -127,6 +164,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iaj-vj-DAh"/>
                     </view>
+<<<<<<< HEAD
+                    <navigationItem key="navigationItem" id="cah-2W-ldg"/>
+                    <connections>
+                        <outlet property="tableView" destination="me6-I8-lTS" id="6iT-cl-nQi"/>
+=======
                     <navigationItem key="navigationItem" id="cah-2W-ldg">
                         <nil key="title"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" id="JQP-yx-ECL">
@@ -141,6 +183,7 @@
                     <connections>
                         <outlet property="segmentedControl" destination="JQP-yx-ECL" id="ncg-RL-pSH"/>
                         <outlet property="tableView" destination="me6-I8-lTS" id="ipr-Fh-TBT"/>
+>>>>>>> movie-list
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Is9-1t-grx" userLabel="First Responder" sceneMemberID="firstResponder"/>
