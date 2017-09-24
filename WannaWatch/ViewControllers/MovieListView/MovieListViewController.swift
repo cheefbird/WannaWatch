@@ -38,7 +38,7 @@ class MovieListViewController: UIViewController {
             
 //            if let count = self?.viewModel.movieCount,
 //              row > (count - 6) {
-//              let page = (count / 25) + 1
+//              let page = (count / 20) + 1
 //              self?.viewModel.loadMovies(forPage: page)
 //            }
 
