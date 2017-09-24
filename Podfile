@@ -14,6 +14,7 @@ target 'WannaWatch' do
   pod 'SwiftyJSON'
   pod 'RealmSwift'
   pod 'Action'
+  pod 'Kingfisher', '~> 3.13.1'
 
   target 'WannaWatchTests' do
     inherit! :search_paths
