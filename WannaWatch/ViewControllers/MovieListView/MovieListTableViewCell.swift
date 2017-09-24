@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 
 class MovieListTableViewCell: UITableViewCell {
@@ -26,8 +27,8 @@ class MovieListTableViewCell: UITableViewCell {
     releaseDateLabel.text = movie.releaseDate
     let percentScore = movie.score * 10
     scoreLabel.text = "Vote score: \(percentScore)"
-    posterImageView.image = movie.placeholderImage
-    
+    posterImageView.kf.indicatorType = .activity
+    posterImageView.kf.setImage(with: movie.imageUrl(forType: .posterSmall))
   }
   
   
