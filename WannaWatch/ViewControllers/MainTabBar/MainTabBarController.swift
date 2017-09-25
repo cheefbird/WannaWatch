@@ -15,7 +15,9 @@ class MainTabBarController: UITabBarController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    setMovieListVM()
+    delegate = self
+    
+    setupMovieListView()
     
   }
   
@@ -26,7 +28,7 @@ class MainTabBarController: UITabBarController {
   
   // MARK: - Setup on First Load
   
-  private func setMovieListVM() {
+  private func setupMovieListView() {
     
     guard let navController = self.viewControllers?[0] as? UINavigationController else {
       print("TabController Error: Unable to set self.VC's[0] and cast")
@@ -60,6 +62,9 @@ class MainTabBarController: UITabBarController {
 
 extension MainTabBarController: UITabBarControllerDelegate {
   
-  
+  func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+    debugPrint("\(viewController) was selected using tab bar")
+    debugPrint(tabBarController.selectedIndex)
+  }
   
 }
