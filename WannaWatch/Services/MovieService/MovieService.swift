@@ -73,7 +73,7 @@ struct MovieService: MovieServiceType {
           for movie in moviesJSON {
             
             let newMovie = Movie(fromJSON: movie)
-            realm.add(newMovie, update: true)
+            realm.add(newMovie, update: false)
             
           }
         }
