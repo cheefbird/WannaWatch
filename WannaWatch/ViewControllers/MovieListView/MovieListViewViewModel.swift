@@ -22,7 +22,7 @@ struct MovieListViewViewModel {
   func movies() -> Observable<Results<Movie>> {
       let realm = try! Realm()
       let movies = realm.objects(Movie.self).sorted(byKeyPath: "score", ascending: false)
-      return Observable.collection(from: movies)
+      return Observable.collection(from: movies, synchronousStart: false)
   }
   
 

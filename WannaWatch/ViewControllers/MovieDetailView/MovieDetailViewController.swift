@@ -18,6 +18,7 @@ class MovieDetailViewController: UIViewController {
   @IBOutlet weak var scoreLabel: UILabel!
   @IBOutlet weak var summaryLabel: UILabel!
   @IBOutlet weak var favoriteButton: UIButton!
+  @IBOutlet weak var posterImageView: UIImageView!
   
   
   // MARK: - Life Cycle
