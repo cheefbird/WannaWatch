@@ -14,6 +14,8 @@
 		06214A141F68BF52007497AB /* WannaWatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06214A131F68BF52007497AB /* WannaWatchTests.swift */; };
 		062213861F7654840080EF08 /* BindableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062213851F7654840080EF08 /* BindableType.swift */; };
 		0622138A1F7656760080EF08 /* MovieServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062213891F7656760080EF08 /* MovieServiceType.swift */; };
+		062DEA541F78A17E0069DEB7 /* MovieDetailViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062DEA531F78A17E0069DEB7 /* MovieDetailViewViewModel.swift */; };
+		062DEA561F78A1920069DEB7 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062DEA551F78A1920069DEB7 /* MovieDetailViewController.swift */; };
 		063B3C561F76608D00D9DAE6 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063B3C551F76608D00D9DAE6 /* MovieService.swift */; };
 		0697A7C61F6DFAD800BE78DB /* MovieListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0697A7C51F6DFAD800BE78DB /* MovieListTableViewCell.swift */; };
 		0697A7C91F6DFCD300BE78DB /* RequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0697A7C81F6DFCD300BE78DB /* RequestRouter.swift */; };
@@ -47,6 +49,8 @@
 		06214A151F68BF52007497AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		062213851F7654840080EF08 /* BindableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableType.swift; sourceTree = "<group>"; };
 		062213891F7656760080EF08 /* MovieServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieServiceType.swift; sourceTree = "<group>"; };
+		062DEA531F78A17E0069DEB7 /* MovieDetailViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewViewModel.swift; sourceTree = "<group>"; };
+		062DEA551F78A1920069DEB7 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		063B3C551F76608D00D9DAE6 /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
 		0697A7C51F6DFAD800BE78DB /* MovieListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListTableViewCell.swift; sourceTree = "<group>"; };
 		0697A7C81F6DFCD300BE78DB /* RequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestRouter.swift; sourceTree = "<group>"; };
@@ -105,6 +109,7 @@
 			children = (
 				062213841F7654660080EF08 /* Protocols */,
 				0697A7CA1F6E3E3300BE78DB /* MainTabBar */,
+				062DEA521F78A1560069DEB7 /* MovieDetailView */,
 				061D81F71F68CD0C003CADF2 /* MovieListView */,
 			);
 			path = ViewControllers;
@@ -203,6 +208,15 @@
 				063B3C551F76608D00D9DAE6 /* MovieService.swift */,
 			);
 			path = MovieService;
+			sourceTree = "<group>";
+		};
+		062DEA521F78A1560069DEB7 /* MovieDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				062DEA531F78A17E0069DEB7 /* MovieDetailViewViewModel.swift */,
+				062DEA551F78A1920069DEB7 /* MovieDetailViewController.swift */,
+			);
+			path = MovieDetailView;
 			sourceTree = "<group>";
 		};
 		0697A7C71F6DFCA300BE78DB /* API */ = {
@@ -474,9 +488,11 @@
 				0697A7C91F6DFCD300BE78DB /* RequestRouter.swift in Sources */,
 				0697A7CE1F6E53BF00BE78DB /* MovieListViewViewModel.swift in Sources */,
 				06E2C7251F6DFA66003A28DE /* MovieListViewController.swift in Sources */,
+				062DEA561F78A1920069DEB7 /* MovieDetailViewController.swift in Sources */,
 				063B3C561F76608D00D9DAE6 /* MovieService.swift in Sources */,
 				0697A7CC1F6E3E5E00BE78DB /* MainTabBarController.swift in Sources */,
 				06D3C6651F68D00700AF38D8 /* Movie.swift in Sources */,
+				062DEA541F78A17E0069DEB7 /* MovieDetailViewViewModel.swift in Sources */,
 				0697A7C61F6DFAD800BE78DB /* MovieListTableViewCell.swift in Sources */,
 				0622138A1F7656760080EF08 /* MovieServiceType.swift in Sources */,
 				062149FF1F68BF52007497AB /* AppDelegate.swift in Sources */,

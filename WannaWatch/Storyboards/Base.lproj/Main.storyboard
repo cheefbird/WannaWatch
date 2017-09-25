@@ -148,10 +148,10 @@
             </objects>
             <point key="canvasLocation" x="231.19999999999999" y="378.26086956521743"/>
         </scene>
-        <!--View Controller-->
+        <!--Movie Detail View Controller-->
         <scene sceneID="gEa-e3-1cv">
             <objects>
-                <viewController id="XWz-QX-nRl" sceneMemberID="viewController">
+                <viewController id="XWz-QX-nRl" customClass="MovieDetailViewController" customModule="WannaWatch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dsY-xF-P2d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -199,6 +199,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="ECA-VT-0sH"/>
                     </view>
+                    <connections>
+                        <outlet property="backdropImageView" destination="q7f-N0-WiY" id="sYG-SM-KNE"/>
+                        <outlet property="favoriteButton" destination="vPI-kA-EP7" id="9aj-Fr-lR4"/>
+                        <outlet property="releaseDateLabel" destination="112-Dq-3hc" id="p9X-s4-Wj7"/>
+                        <outlet property="scoreLabel" destination="75d-9N-eAX" id="8oY-b5-n0A"/>
+                        <outlet property="summaryLabel" destination="cM1-Rj-deJ" id="411-3l-JFj"/>
+                        <outlet property="titleLabel" destination="dTz-hY-RTo" id="tab-qr-gsS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KPm-2H-8jf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
