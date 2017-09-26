@@ -39,7 +39,7 @@ class MovieListViewController: UIViewController {
       .bind(
         to: tableView.rx.items(
           cellIdentifier: "MovieCell",
-          cellType: MovieListTableViewCell.self)) { [weak self] (row, element, cell) in
+          cellType: MovieListTableViewCell.self)) { (row, element, cell) in
             
             //            if let count = self?.viewModel.movieCount,
             //              row > (count - 6) {

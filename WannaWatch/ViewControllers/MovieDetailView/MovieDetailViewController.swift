@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+import Action
+
 
 class MovieDetailViewController: UIViewController, BindableType {
   

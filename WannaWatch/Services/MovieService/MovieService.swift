@@ -14,7 +14,7 @@ import RxRealm
 import SwiftyJSON
 
 
-struct MovieService: MovieServiceType {
+class MovieService: MovieServiceType {
   
   
   let disposeBag = DisposeBag()
@@ -59,7 +59,7 @@ struct MovieService: MovieServiceType {
   @discardableResult
   func fetchMovies(forPage page: Int) -> Observable<[Movie]> {
     var result = [Movie]()
-    debugPrint("\(RequestRouter.getMovies(page: 1).urlRequest?.debugDescription)")
+    debugPrint("\(String(describing: RequestRouter.getMovies(page: 1).urlRequest?.debugDescription))")
     requestJSON(RequestRouter.getMovies(page: page))
       .debug()
       .subscribe(onNext: { (response, data) in
