@@ -42,12 +42,20 @@ class MovieDetailViewController: UIViewController, BindableType {
   }
   
   
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(animated)
+    
+  }
+  
+  
   func bindToViewModel() {
     
     viewModel.movie.asObservable()
       .subscribe(onNext: { [weak self] movie in
         self?.backdropImageView.kf.setImage(with: movie.imageUrl(forType: .backdrop))
         self?.posterImageView.kf.setImage(with: movie.imageUrl(forType: .posterMedium))
+        }, onDisposed: {
+          print("DISPOSING")
       })
       .disposed(by: disposeBag)
     
