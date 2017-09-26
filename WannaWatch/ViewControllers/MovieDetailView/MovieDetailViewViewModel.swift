@@ -18,6 +18,7 @@ struct MovieDetailViewViewModel {
   let movieService: MovieServiceType
   let movie: Variable<Movie>
   
+  
   let disposeBag = DisposeBag()
   
   
