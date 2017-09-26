@@ -8,7 +8,8 @@
 
 import UIKit
 
-class MovieDetailViewController: UIViewController {
+class MovieDetailViewController: UIViewController, BindableType {
+  
   
   // MARK: - Outlets
   
@@ -21,6 +22,10 @@ class MovieDetailViewController: UIViewController {
   @IBOutlet weak var posterImageView: UIImageView!
   
   
+  // MARK: - Properties
+  
+  var viewModel: MovieDetailViewViewModel!
+  
   // MARK: - Life Cycle
   
   override func viewDidLoad() {
@@ -32,4 +37,11 @@ class MovieDetailViewController: UIViewController {
     super.didReceiveMemoryWarning()
     
   }
+  
+  
+  func bindToViewModel() {
+    
+  }
+  
+  
 }
