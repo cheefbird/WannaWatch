@@ -50,6 +50,7 @@ class SceneCoordinator: SceneCoordinatorType {
   
   // MARK: - Transitions
   
+  
   /// Perform scene transition. On successful transition, resulting observable completes. Can be subscribed to if you want to take further action, as it works like a completion callback.
   ///
   /// - Parameters:
@@ -92,6 +93,7 @@ class SceneCoordinator: SceneCoordinatorType {
       .take(1)
       .ignoreElements()
   }
+  
   
   
   /// Perform backwards transition. Dismisses modals and pops controllers from nav stack.

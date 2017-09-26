@@ -121,7 +121,6 @@
                                             <outlet property="releaseDateLabel" destination="Rjt-JS-h8M" id="Tia-N8-MTu"/>
                                             <outlet property="scoreLabel" destination="Zba-4O-yFY" id="jOJ-22-Gp3"/>
                                             <outlet property="titleLabel" destination="55v-VX-Y4T" id="dLj-k1-vBR"/>
-                                            <segue destination="XWz-QX-nRl" kind="show" identifier="showMovieDetail" id="0UQ-Mc-qWm"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -151,6 +150,7 @@
                     <connections>
                         <outlet property="segmentedControl" destination="JQP-yx-ECL" id="ncg-RL-pSH"/>
                         <outlet property="tableView" destination="me6-I8-lTS" id="ipr-Fh-TBT"/>
+                        <segue destination="XWz-QX-nRl" kind="show" identifier="showMovieDetail" id="BBA-GB-omC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Is9-1t-grx" userLabel="First Responder" sceneMemberID="firstResponder"/>
