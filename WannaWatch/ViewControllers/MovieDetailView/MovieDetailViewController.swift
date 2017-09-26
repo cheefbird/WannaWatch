@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import Action
+import Kingfisher
 
 
 class MovieDetailViewController: UIViewController, BindableType {
@@ -30,6 +31,9 @@ class MovieDetailViewController: UIViewController, BindableType {
   
   var viewModel: MovieDetailViewViewModel!
   
+  let disposeBag = DisposeBag()
+  
+  
   // MARK: - Life Cycle
   
   override func viewDidLoad() {
@@ -37,15 +41,37 @@ class MovieDetailViewController: UIViewController, BindableType {
     
   }
   
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    
-  }
-  
   
   func bindToViewModel() {
     
+    viewModel.movie.asObservable()
+      .subscribe(onNext: { [weak self] movie in
+        self?.backdropImageView.kf.setImage(with: movie.imageUrl(forType: .backdrop))
+        self?.posterImageView.kf.setImage(with: movie.imageUrl(forType: .posterMedium))
+      })
+      .disposed(by: disposeBag)
+    
+    
+    let movie = viewModel.movie.asDriver()
+    
+    movie.map { $0.title }
+      .drive(titleLabel.rx.text)
+      .disposed(by: disposeBag)
+    
+    movie.map { "Released \($0.releaseDate)"}
+      .drive(releaseDateLabel.rx.text)
+      .disposed(by: disposeBag)
+    
+    movie.map { "Avg. Score: \($0.score)" }
+      .drive(scoreLabel.rx.text)
+      .disposed(by: disposeBag)
+    
+    movie.map { $0.summary }
+      .drive(summaryLabel.rx.text)
+      .disposed(by: disposeBag)
+    
+    favoriteButton.rx.action = viewModel.toggleFavorite
+    
   }
-  
   
 }
