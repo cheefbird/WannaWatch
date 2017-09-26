@@ -11,7 +11,7 @@ import RxSwift
 import Action
 
 
-class MovieDetailViewViewModel {
+struct MovieDetailViewViewModel {
   
   // MARK: - Properties
   
@@ -26,10 +26,6 @@ class MovieDetailViewViewModel {
   init(movieService: MovieServiceType, movie: Movie) {
     self.movieService = movieService
     self.movie = Variable<Movie>(movie)
-  }
-  
-  deinit {
-    print("MovieDetailVM deinitialized")
   }
   
   

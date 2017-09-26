@@ -64,18 +64,11 @@ class MovieListViewController: UIViewController {
             return results[index.row]
         }
       }
-      .debug()
       .subscribe(onNext: { [weak self] movie in
         self?.performSegue(withIdentifier: "showMovieDetail", sender: movie)
-        })
+      })
       .disposed(by: disposeBag)
     
-  }
-  
-  
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-    print(RxSwift.Resources.total)
   }
   
   
