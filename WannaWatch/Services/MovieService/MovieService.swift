@@ -45,7 +45,7 @@ class MovieService: MovieServiceType {
   
   
   @discardableResult
-  func toggleFavorite(movie: Movie) -> Observable<Movie> {
+  func toggleFavorite(_ movie: Movie) -> Observable<Movie> {
     let result = withRealm("toggling favorite") { realm -> Observable<Movie> in
       try realm.write {
         movie.isFavorite = !movie.isFavorite

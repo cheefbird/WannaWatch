@@ -11,31 +11,44 @@ import RxSwift
 import Action
 
 
-struct MovieDetailViewViewModel {
+class MovieDetailViewViewModel {
   
   // MARK: - Properties
   
-  let movieService: MovieServiceType
-  let movie: Variable<Movie>
+  let backdropImagePath: URL
+  let posterImagePath: URL
+  let movieTitle: String
+  let releaseDate: String
+  let score: String
+  let summary: String
   
+  let toggleAction: CocoaAction
+  
+  let isFavorite: Variable<Bool>
   
   let disposeBag = DisposeBag()
   
   
   // MARK: - Initializer
   
-  init(movieService: MovieServiceType, movie: Movie) {
-    self.movieService = movieService
-    self.movie = Variable<Movie>(movie)
-  }
-  
-  
-  // MARK: - Actions
-  
-  var toggleFavorite: CocoaAction {
+  init(movie: Movie, action: CocoaAction) {
     
-    return CocoaAction {
-      return self.movieService.toggleFavorite(movie: self.movie.value).map { _ in }
-    }
+    backdropImagePath = movie.imageUrl(forType: .backdrop)
+    posterImagePath = movie.imageUrl(forType: .posterMedium)
+    movieTitle = movie.title
+    releaseDate = "Released: \(movie.formattedReleaseDate().description)"
+    score = "Avg. Score: \(movie.score)"
+    summary = movie.summary
+    
+    toggleAction = action
+    
+    isFavorite = Variable<Bool>(movie.isFavorite)
+    
+    movie.rx.observe(Bool.self, "isFavorite")
+      .subscribe(onNext: { [weak self] value in
+        self?.isFavorite.value = value!
+      })
+      .disposed(by: disposeBag)
+    
   }
 }

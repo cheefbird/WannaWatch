@@ -14,6 +14,8 @@ protocol SceneCoordinatorType {
   
   init(window: UIWindow)
   
+  var currentViewController: UIViewController { get set }
+  
   @discardableResult
   func transition(to scene: Scene, type: SceneTransitionType) -> Observable<Void>
   

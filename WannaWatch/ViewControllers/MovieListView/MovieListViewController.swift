@@ -53,34 +53,22 @@ class MovieListViewController: UIViewController {
     
     
     // Observe table selection for segue
-    tableView.rx.itemSelected.asObservable()
-      .flatMap { [weak self] index -> Observable<Movie> in
-        guard let strongSelf = self else {
-          fatalError("Erro when tapping cell - self doesn't exist!")
-        }
+    tableView.rx.itemSelected
+      .debug()
+      .flatMap { [unowned self] indexPath -> Observable<Movie> in
         
-        return strongSelf.viewModel.movies()
+        return self.viewModel.movies()
           .map { results in
-            return results[index.row]
+            return results[indexPath.row]
         }
       }
-      .subscribe(onNext: { [weak self] movie in
-        self?.performSegue(withIdentifier: "showMovieDetail", sender: movie)
+      .do(onNext: { _ in
+        debugPrint("ItemSelected!!!!!!!!!!!!!!")
       })
+      .subscribe(viewModel.viewDetailsAction.inputs)
       .disposed(by: disposeBag)
     
   }
-  
-  
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    guard var movieDetailVC = segue.destination as? MovieDetailViewController,
-      let movie = sender as? Movie else { return }
-    
-    let movieDetailVM = MovieDetailViewViewModel(movieService: viewModel.movieService, movie: movie)
-    
-    movieDetailVC.bind(withViewModel: movieDetailVM)
-  }
-  
 }
 
 

@@ -42,36 +42,34 @@ class MovieDetailViewController: UIViewController, BindableType {
   }
   
   
+  deinit {
+    print("EVENT: MovieDetail view deinitialized")
+  }
+  
+  
   func bindToViewModel() {
     
-    viewModel.movie.asObservable()
-      .subscribe(onNext: { [weak self] movie in
-        self?.backdropImageView.kf.setImage(with: movie.imageUrl(forType: .backdrop))
-        self?.posterImageView.kf.setImage(with: movie.imageUrl(forType: .posterMedium))
-      })
-      .disposed(by: disposeBag)
+    backdropImageView.kf.indicatorType = .activity
+    backdropImageView.kf.setImage(with: viewModel.backdropImagePath)
+    posterImageView.kf.indicatorType = .activity
+    posterImageView.kf.setImage(with: viewModel.posterImagePath)
     
+    titleLabel.text = viewModel.movieTitle
+    releaseDateLabel.text = viewModel.releaseDate
+    scoreLabel.text = viewModel.score
+    summaryLabel.text = viewModel.summary
     
-    let movie = viewModel.movie.asDriver()
-    
-    movie.map { $0.title }
-      .drive(titleLabel.rx.text)
-      .disposed(by: disposeBag)
-    
-    movie.map { "Released \($0.releaseDate)"}
-      .drive(releaseDateLabel.rx.text)
-      .disposed(by: disposeBag)
-    
-    movie.map { "Avg. Score: \($0.score)" }
-      .drive(scoreLabel.rx.text)
-      .disposed(by: disposeBag)
-    
-    movie.map { $0.summary }
-      .drive(summaryLabel.rx.text)
-      .disposed(by: disposeBag)
-    
-    favoriteButton.rx.action = viewModel.toggleFavorite
-    
+    favoriteButton.rx.action = viewModel.toggleAction
+        
   }
   
 }
+
+
+
+
+
+
+
+
+

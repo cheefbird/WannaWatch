@@ -20,7 +20,7 @@ class SceneCoordinator: SceneCoordinatorType {
   fileprivate var window: UIWindow
   
   /// Tracks currently displayed view controller. Useful when needing to differentiate between displayed VC and presenting VC, such as a navigation controller.
-  fileprivate var currentViewController: UIViewController
+  var currentViewController: UIViewController
   
   
   // MARK: - Initializer

@@ -10,12 +10,18 @@ import UIKit
 
 class MainTabBarController: UITabBarController {
   
+  // MARK: - Properties
+  
+  var sceneCoordinator: SceneCoordinatorType!
+  
   // MARK: - Life Cycle
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
     delegate = self
+    
+    sceneCoordinator = setupSceneCoordinator()
     
     setupMovieListView()
     
@@ -41,11 +47,31 @@ class MainTabBarController: UITabBarController {
         return
     }
     
+    guard var sceneCoordinator = sceneCoordinator else {
+      print("TabController Error: Unable to set sceneController")
+      return
+    }
+    
+    sceneCoordinator.currentViewController = movieListVC
+    
     let movieService = MovieService()
-    let movieListVM = MovieListViewViewModel(movieService: movieService)
+    let movieListVM = MovieListViewViewModel(
+      movieService: movieService,
+      sceneCoordinator: sceneCoordinator)
     
     movieListVC.viewModel = movieListVM
     print("MovieListVM set")
+    
+  }
+  
+  
+  fileprivate func setupSceneCoordinator() -> SceneCoordinatorType? {
+    guard let appDelegate = UIApplication.shared.delegate as? AppDelegate,
+      let appWindow = appDelegate.window else {
+      return nil
+    }
+    
+    return SceneCoordinator(window: appWindow)
     
   }
   
