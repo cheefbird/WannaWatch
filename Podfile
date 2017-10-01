@@ -11,6 +11,7 @@ target 'WannaWatch' do
   pod 'Alamofire'
   pod 'RxAlamofire'
   pod 'RxRealm'
+  pod 'RxRealmDataSources'
   pod 'SwiftyJSON'
   pod 'RealmSwift'
   pod 'Action'
