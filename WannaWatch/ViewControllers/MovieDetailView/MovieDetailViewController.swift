@@ -37,7 +37,7 @@ class MovieDetailViewController: UIViewController, BindableType {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    navigationController?.title = viewModel.movieTitle
+    title = viewModel.movieTitle
     
   }
   
