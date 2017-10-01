@@ -205,9 +205,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sDN-zZ-Scb" customClass="CustomButton" customModule="WannaWatch" customModuleProvider="target">
-                                        <rect key="frame" x="4" y="96" width="141" height="28"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sDN-zZ-Scb" customClass="CustomButton" customModule="WannaWatch" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="95" width="141" height="28"/>
                                         <inset key="contentEdgeInsets" minX="4" minY="5" maxX="4" maxY="5"/>
                                         <state key="normal" title="Favorite This Movie"/>
                                         <userDefinedRuntimeAttributes>
@@ -223,12 +222,14 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="yqu-X0-h4u" firstAttribute="leading" secondItem="TA9-WY-J7R" secondAttribute="leading" constant="8" id="3oW-ff-yBd"/>
+                                    <constraint firstItem="sDN-zZ-Scb" firstAttribute="leading" secondItem="TA9-WY-J7R" secondAttribute="leading" constant="8" id="42n-0e-TLv"/>
                                     <constraint firstItem="MWz-mp-ct1" firstAttribute="leading" secondItem="kmd-ca-CzJ" secondAttribute="trailing" constant="5" id="5QK-Qn-aY9"/>
                                     <constraint firstItem="MWz-mp-ct1" firstAttribute="leading" secondItem="yqu-X0-h4u" secondAttribute="trailing" constant="5" id="AQ3-2n-MlU"/>
                                     <constraint firstItem="T6u-b1-nlY" firstAttribute="top" secondItem="TA9-WY-J7R" secondAttribute="top" constant="8" id="BLm-QV-wOF"/>
                                     <constraint firstItem="MWz-mp-ct1" firstAttribute="top" secondItem="TA9-WY-J7R" secondAttribute="top" constant="8" id="Bwf-fi-7lB"/>
                                     <constraint firstItem="MWz-mp-ct1" firstAttribute="leading" secondItem="T6u-b1-nlY" secondAttribute="trailing" constant="5" id="Efs-Gr-Gpd"/>
                                     <constraint firstItem="MOj-MO-1vG" firstAttribute="leading" secondItem="TA9-WY-J7R" secondAttribute="leading" constant="8" id="GZa-qM-ePw"/>
+                                    <constraint firstItem="sDN-zZ-Scb" firstAttribute="top" secondItem="yqu-X0-h4u" secondAttribute="bottom" constant="8" id="GeV-QH-Jwa"/>
                                     <constraint firstAttribute="trailing" secondItem="MWz-mp-ct1" secondAttribute="trailing" constant="8" id="O48-lY-05J"/>
                                     <constraint firstItem="kmd-ca-CzJ" firstAttribute="top" secondItem="T6u-b1-nlY" secondAttribute="bottom" constant="8" id="SaZ-hX-tSG"/>
                                     <constraint firstItem="yqu-X0-h4u" firstAttribute="top" secondItem="kmd-ca-CzJ" secondAttribute="bottom" constant="8" id="Vie-Fu-GEh"/>
@@ -237,6 +238,7 @@
                                     <constraint firstAttribute="trailing" secondItem="MOj-MO-1vG" secondAttribute="trailing" constant="8" id="gRU-U5-U4I"/>
                                     <constraint firstItem="T6u-b1-nlY" firstAttribute="leading" secondItem="TA9-WY-J7R" secondAttribute="leading" constant="8" id="v43-4q-Fa0"/>
                                     <constraint firstItem="kmd-ca-CzJ" firstAttribute="leading" secondItem="TA9-WY-J7R" secondAttribute="leading" constant="8" id="v69-JR-b7q"/>
+                                    <constraint firstItem="MWz-mp-ct1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sDN-zZ-Scb" secondAttribute="trailing" id="yGT-jL-KDE"/>
                                 </constraints>
                             </view>
                         </subviews>
