@@ -52,21 +52,10 @@ class MovieListViewController: UIViewController {
       .disposed(by: disposeBag)
     
     
-    // Observe table selection for segue
-    tableView.rx.itemSelected
-      .debug()
-      .flatMap { [unowned self] indexPath -> Observable<Movie> in
-        
-        return self.viewModel.movies()
-          .map { results in
-            return results[indexPath.row]
-        }
-      }
-      .do(onNext: { _ in
-        debugPrint("ItemSelected!!!!!!!!!!!!!!")
-      })
+    tableView.rx.modelSelected(Movie.self)
       .subscribe(viewModel.viewDetailsAction.inputs)
       .disposed(by: disposeBag)
+    
     
   }
 }
