@@ -28,10 +28,12 @@ class MovieDetailViewViewModel {
   
   let disposeBag = DisposeBag()
   
+  var sceneCoordinator: SceneCoordinatorType
+  
   
   // MARK: - Initializer
   
-  init(movie: Movie, action: CocoaAction) {
+  init(movie: Movie, coordinator: SceneCoordinatorType, action: CocoaAction) {
     
     backdropImagePath = movie.imageUrl(forType: .backdrop)
     posterImagePath = movie.imageUrl(forType: .posterMedium)
@@ -44,11 +46,7 @@ class MovieDetailViewViewModel {
     
     isFavorite = Variable<Bool>(movie.isFavorite)
     
-    movie.rx.observe(Bool.self, "isFavorite")
-      .subscribe(onNext: { [weak self] value in
-        self?.isFavorite.value = value!
-      })
-      .disposed(by: disposeBag)
+    sceneCoordinator = coordinator
     
   }
 }

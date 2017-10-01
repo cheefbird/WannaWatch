@@ -31,14 +31,18 @@ class MovieDetailViewController: UIViewController, BindableType {
   
   var viewModel: MovieDetailViewViewModel!
   
-  let disposeBag = DisposeBag()
-  
   
   // MARK: - Life Cycle
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
+  }
+  
+  
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(animated)
+    viewModel.sceneCoordinator.currentViewController = navigationController!.viewControllers.first!
   }
   
   
@@ -59,9 +63,24 @@ class MovieDetailViewController: UIViewController, BindableType {
     scoreLabel.text = viewModel.score
     summaryLabel.text = viewModel.summary
     
+    viewModel.isFavorite.asDriver()
+      .drive(favoriteButton.rx.isSelected)
+      .disposed(by: viewModel.disposeBag)
+    
     favoriteButton.rx.action = viewModel.toggleAction
-        
+    
+    viewModel.toggleAction.executionObservables
+      .subscribe(onNext: { [weak self] _ in
+        if let result = self?.viewModel.isFavorite.value {
+          self?.viewModel.isFavorite.value = !result
+        }
+        }, onCompleted: { _ in
+          print("MovieDetailVM action executionObservables completed")
+      })
+      .disposed(by: viewModel.disposeBag)
+
   }
+  
   
 }
 

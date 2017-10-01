@@ -57,6 +57,7 @@ struct MovieListViewViewModel {
     return Action { movie in
       let movieDetailVM = MovieDetailViewViewModel(
         movie: movie,
+        coordinator: this.sceneCoordinator,
         action: this.toggleFavorite(movie: movie))
       
       return this.sceneCoordinator.transition(to: Scene.movieDetail(movieDetailVM), type: .push)

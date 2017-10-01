@@ -55,6 +55,7 @@ class MovieListViewController: UIViewController {
     tableView.rx.modelSelected(Movie.self)
       .subscribe(viewModel.viewDetailsAction.inputs)
       .disposed(by: disposeBag)
+
     
     
   }
