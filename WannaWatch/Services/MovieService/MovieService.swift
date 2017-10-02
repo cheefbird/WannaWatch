@@ -24,7 +24,7 @@ class MovieService: MovieServiceType {
     do {
       let realm = try Realm()
       if realm.objects(Movie.self).count == 0 {
-        fetchMovies(forPage: 1)
+        getMovies(forPage: 1)
       }
     } catch let error {
       print("** ERROR in init for Movie Service **")
@@ -57,40 +57,16 @@ class MovieService: MovieServiceType {
   
   
   @discardableResult
-  func fetchMovies(forPage page: Int) -> Observable<[Movie]> {
-    var result = [Movie]()
-    debugPrint("\(String(describing: RequestRouter.getMovies(page: 1).urlRequest?.debugDescription))")
-    requestJSON(RequestRouter.getMovies(page: page))
-      .debug()
-      .subscribe(onNext: { (response, data) in
-        guard let json = data as? [String: Any] else { return }
-        guard let movies = json["results"] as? [[String: Any]] else { return }
-        
-        let moviesJSON = movies.map { JSON($0) }
-        
-        let realm = try! Realm()
-        try! realm.write {
-          for movie in moviesJSON {
-            
-            let newMovie = Movie(fromJSON: movie)
-            realm.add(newMovie, update: false)
-            
-          }
-        }
-
-        
-        for movie in moviesJSON {
-          let newMovie = Movie(fromJSON: movie)
-          result.append(newMovie)
-        }
-        
-      })
-      .disposed(by: disposeBag)
-    
-    
-    
-    return Observable.just(result)
-    
+  func getMovies(forPage page: Int) -> Observable<[Movie]> {
+    print(RequestRouter.getMovies(page: page).urlRequest?.description)
+    return RxAlamofire.requestJSON(RequestRouter.getMovies(page: page))
+      .map { (_, data) -> [JSON] in
+        let json = JSON(data)
+        return json["results"].arrayValue
+      }
+      .map { array in
+        return array.map { Movie(fromJSON: $0) }
+    }
   }
   
   

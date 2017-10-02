@@ -17,7 +17,7 @@ protocol MovieServiceType {
   func toggleFavorite(_ movie: Movie) -> Observable<Movie>
   
   @discardableResult
-  func fetchMovies(forPage page: Int) -> Observable<[Movie]>
+  func getMovies(forPage page: Int) -> Observable<[Movie]>
   
   
   func saveMovies(_ movies: [Movie])
@@ -27,6 +27,7 @@ protocol MovieServiceType {
 
 enum MovieServiceError: Error {
   
+  case getMoviesFailed
   case toggleFavoriteFailed(Movie)
   
 }
