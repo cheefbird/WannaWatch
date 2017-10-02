@@ -44,8 +44,9 @@ enum RequestRouter: URLRequestConvertible {
     var params = Parameters()
     params["api_key"] = apiKey
     params["sorty_by"] = "vote_average.desc"
-    params["include_adult"] = false
-    params["include_video"] = false
+    params["vote_count.gte"] = 1000
+    params["include_adult"] = "false"
+    params["include_video"] = "false"
     
     switch self {
     case .getMovies(let page):
