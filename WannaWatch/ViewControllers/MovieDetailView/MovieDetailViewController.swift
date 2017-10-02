@@ -74,6 +74,7 @@ class MovieDetailViewController: UIViewController, BindableType {
     favoriteButton.rx.action = viewModel.toggleAction
     
     viewModel.toggleAction.executionObservables
+      .debug("ToggleAction", trimOutput: false)
       .subscribe(onNext: { [weak self] _ in
         if let result = self?.viewModel.isFavorite.value {
           self?.viewModel.isFavorite.value = !result

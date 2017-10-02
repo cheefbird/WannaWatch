@@ -30,12 +30,18 @@ class MovieListViewController: UIViewController {
   
   // MARK: - Life Cycle
   
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    print(RxSwift.Resources.total)
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
     
     // Bind data source to tableView
     viewModel.movies()
+      .debug("Movie Results", trimOutput: true)
       .bind(
         to: tableView.rx.items(
           cellIdentifier: "MovieCell",
@@ -53,6 +59,7 @@ class MovieListViewController: UIViewController {
     
     
     tableView.rx.modelSelected(Movie.self)
+      .debug("Model Selected", trimOutput: true)
       .subscribe(viewModel.viewDetailsAction.inputs)
       .disposed(by: disposeBag)
 
