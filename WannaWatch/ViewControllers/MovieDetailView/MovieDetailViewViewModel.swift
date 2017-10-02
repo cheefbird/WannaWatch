@@ -25,9 +25,7 @@ class MovieDetailViewViewModel {
   let toggleAction: CocoaAction
   
   let isFavorite: Variable<Bool>
-  
-  let disposeBag = DisposeBag()
-  
+    
   var sceneCoordinator: SceneCoordinatorType
   
   

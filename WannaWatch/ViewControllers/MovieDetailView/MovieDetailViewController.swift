@@ -31,6 +31,8 @@ class MovieDetailViewController: UIViewController, BindableType {
   
   var viewModel: MovieDetailViewViewModel!
   
+  let disposeBag = DisposeBag()
+  
   
   // MARK: - Life Cycle
   
@@ -67,7 +69,7 @@ class MovieDetailViewController: UIViewController, BindableType {
     
     viewModel.isFavorite.asDriver()
       .drive(favoriteButton.rx.isSelected)
-      .disposed(by: viewModel.disposeBag)
+      .disposed(by: disposeBag)
     
     favoriteButton.rx.action = viewModel.toggleAction
     
@@ -79,7 +81,7 @@ class MovieDetailViewController: UIViewController, BindableType {
         }, onCompleted: { _ in
           print("MovieDetailVM action executionObservables completed")
       })
-      .disposed(by: viewModel.disposeBag)
+      .disposed(by: disposeBag)
 
   }
   
