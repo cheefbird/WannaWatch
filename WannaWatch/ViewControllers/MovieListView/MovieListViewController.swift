@@ -62,8 +62,6 @@ class MovieListViewController: UIViewController {
       .debug("Model Selected", trimOutput: true)
       .subscribe(viewModel.viewDetailsAction.inputs)
       .disposed(by: disposeBag)
-
-    
     
   }
 }
