@@ -21,10 +21,14 @@ struct MovieListViewViewModel {
   
   let sceneCoordinator: SceneCoordinatorType
   
-  lazy var movieCount: Int = {
-    let realm = try! Realm()
-    return realm.objects(Movie.self).count
-  }()
+  let disposeBag = DisposeBag()
+  
+  
+  // MARK: - Observables
+  
+  let pagesLoaded = Variable<Int>(1)
+  
+  let isLoading = Variable<Bool>(false)
   
   
   // MARK: - Init
@@ -33,6 +37,7 @@ struct MovieListViewViewModel {
     self.movieService = movieService
     self.sceneCoordinator = sceneCoordinator
     
+    loadMovies(forPage: 1)
     debugPrint(sceneCoordinator.currentViewController.debugDescription)
   }
   
@@ -40,14 +45,21 @@ struct MovieListViewViewModel {
   // MARK: - Methods
   
   func loadMovies(forPage page: Int) {
-    movieService.fetchMovies(forPage: page)
+    movieService.getMovies(forPage: page)
+      .observeOn(SerialDispatchQueueScheduler(qos: .background))
+      .do(onNext: { _ in
+        self.pagesLoaded.value = page
+        print("PAGES LOADED: \(self.pagesLoaded.value)")
+      })
+      .subscribe(Realm.rx.add(update: true))
+      .disposed(by: disposeBag)
   }
   
   
-  func movies() -> Observable<Results<Movie>> {
+  func movies() -> Observable<(AnyRealmCollection<Movie>, RealmChangeset?)> {
     let realm = try! Realm()
     let movies = realm.objects(Movie.self).sorted(byKeyPath: "score", ascending: false)
-    return Observable.collection(from: movies, synchronousStart: false)
+    return Observable.changeset(from: movies)
   }
   
   

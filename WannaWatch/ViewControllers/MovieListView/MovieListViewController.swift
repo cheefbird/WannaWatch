@@ -11,6 +11,7 @@ import RxSwift
 import RxCocoa
 import RealmSwift
 import RxRealm
+import RxRealmDataSources
 
 
 class MovieListViewController: UIViewController {
@@ -37,33 +38,33 @@ class MovieListViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+
     
+    let dataSource = RxTableViewRealmDataSource<Movie>(
+      cellIdentifier: "MovieCell",
+      cellType: MovieListTableViewCell.self) { (cell, indexPath, movie) in
+        cell.configure(withMovie: movie)
+        
+        if indexPath.row > ((20 * self.viewModel.pagesLoaded.value) - 5) {
+          self.viewModel.loadMovies(forPage: self.viewModel.pagesLoaded.value + 1)
+        }
+    }
+
     
     // Bind data source to tableView
     viewModel.movies()
       .debug("Movie Results", trimOutput: true)
-      .bind(
-        to: tableView.rx.items(
-          cellIdentifier: "MovieCell",
-          cellType: MovieListTableViewCell.self)) { (row, element, cell) in
-            
-            //            if let count = self?.viewModel.movieCount,
-            //              row > (count - 6) {
-            //              let page = (count / 20) + 1
-            //              self?.viewModel.loadMovies(forPage: page)
-            //            }
-            
-            cell.configure(withMovie: element)
-      }
+      .bind(to: tableView.rx.realmChanges(dataSource))
       .disposed(by: disposeBag)
+
     
-    
-    tableView.rx.modelSelected(Movie.self)
+    tableView.rx.realmModelSelected(Movie.self)
       .debug("Model Selected", trimOutput: true)
       .subscribe(viewModel.viewDetailsAction.inputs)
       .disposed(by: disposeBag)
     
   }
+  
 }
 
 
