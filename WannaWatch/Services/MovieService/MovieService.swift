@@ -16,7 +16,7 @@ import SwiftyJSON
 
 class MovieService: MovieServiceType {
   
-  var currentUser: User
+  private(set) var currentUser: User
   
   let disposeBag = DisposeBag()
   

@@ -13,6 +13,8 @@ import RealmSwift
 
 protocol MovieServiceType {
   
+  var currentUser: User { get }
+  
   @discardableResult
   func toggleFavorite(_ movie: Movie) -> Observable<Movie>
   
