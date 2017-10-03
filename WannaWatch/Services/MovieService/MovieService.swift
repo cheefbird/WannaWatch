@@ -58,7 +58,7 @@ class MovieService: MovieServiceType {
   
   @discardableResult
   func getMovies(forPage page: Int) -> Observable<[Movie]> {
-    print(RequestRouter.getMovies(page: page).urlRequest?.description)
+    print("\(String(describing: RequestRouter.getMovies(page: page).urlRequest))")
     return RxAlamofire.requestJSON(RequestRouter.getMovies(page: page))
       .map { (_, data) -> [JSON] in
         let json = JSON(data)
