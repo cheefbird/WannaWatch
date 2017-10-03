@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import RealmSwift
 
 class MainTabBarController: UITabBarController {
   
   // MARK: - Properties
   
   var sceneCoordinator: SceneCoordinatorType!
+  
+  var currentUser: User!
   
   // MARK: - Life Cycle
   
@@ -21,14 +24,12 @@ class MainTabBarController: UITabBarController {
     
     delegate = self
     
+    currentUser = getCurrentUser()
+    
     sceneCoordinator = setupSceneCoordinator()
     
     setupMovieListView()
     
-  }
-  
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
   }
   
   
@@ -76,11 +77,11 @@ class MainTabBarController: UITabBarController {
   }
   
   
-  // MARK: - Navigation
-  
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    
+  fileprivate func getCurrentUser() -> User {
+    let realm = try! Realm()
+    return User.currentUser(inRealm: realm)
   }
+  
 }
 
 
