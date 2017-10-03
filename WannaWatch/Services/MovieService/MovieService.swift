@@ -16,11 +16,15 @@ import SwiftyJSON
 
 class MovieService: MovieServiceType {
   
+  var currentUser: User
   
   let disposeBag = DisposeBag()
   
   
-  init() {
+  init(user: User) {
+    
+    currentUser = user
+    
     do {
       let realm = try Realm()
       if realm.objects(Movie.self).count == 0 {

@@ -48,14 +48,15 @@ class MainTabBarController: UITabBarController {
         return
     }
     
-    guard var sceneCoordinator = sceneCoordinator else {
-      print("TabController Error: Unable to set sceneController")
-      return
+    guard var sceneCoordinator = sceneCoordinator,
+      currentUser != nil else {
+        print("TabController Error: Unable to set sceneController")
+        return
     }
     
     sceneCoordinator.currentViewController = movieListVC
     
-    let movieService = MovieService()
+    let movieService = MovieService(user: currentUser)
     let movieListVM = MovieListViewViewModel(
       movieService: movieService,
       sceneCoordinator: sceneCoordinator)
@@ -69,7 +70,7 @@ class MainTabBarController: UITabBarController {
   fileprivate func setupSceneCoordinator() -> SceneCoordinatorType? {
     guard let appDelegate = UIApplication.shared.delegate as? AppDelegate,
       let appWindow = appDelegate.window else {
-      return nil
+        return nil
     }
     
     return SceneCoordinator(window: appWindow)
