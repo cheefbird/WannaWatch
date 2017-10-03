@@ -13,6 +13,9 @@ import RxRealm
 import Action
 
 
+typealias RxRealmChangeset = (AnyRealmCollection<Movie>, RealmChangeset?)
+
+
 struct MovieListViewViewModel {
   
   // MARK: - Properties
@@ -56,7 +59,12 @@ struct MovieListViewViewModel {
   }
   
   
-  func movies() -> Observable<(AnyRealmCollection<Movie>, RealmChangeset?)> {
+  func favoriteMovies() -> Observable<RxRealmChangeset> {
+    return Observable.changeset(from: movieService.currentUser.favoriteMovies)
+  }
+  
+  
+  func movies() -> Observable<RxRealmChangeset> {
     let realm = try! Realm()
     let movies = realm.objects(Movie.self).sorted(byKeyPath: "score", ascending: false)
     return Observable.changeset(from: movies)
