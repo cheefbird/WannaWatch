@@ -35,11 +35,11 @@
             </objects>
             <point key="canvasLocation" x="-1524" y="380"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Movies-->
         <scene sceneID="Q7v-VV-2d1">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bl0-BD-eti" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="mostViewed" id="yPq-ET-1oA"/>
+                    <tabBarItem key="tabBarItem" title="Movies" image="icon_movies-selected" selectedImage="icon_movies" id="yPq-ET-1oA"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Uo2-3J-aB1">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -272,4 +272,8 @@
             <point key="canvasLocation" x="1140" y="378.26086956521743"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon_movies" width="24" height="24"/>
+        <image name="icon_movies-selected" width="25" height="24"/>
+    </resources>
 </document>
