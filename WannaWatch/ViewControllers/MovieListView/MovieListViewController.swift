@@ -50,53 +50,30 @@ class MovieListViewController: UIViewController {
         }
     }
     
-    
-    segmentedControl.rx.controlEvent(.valueChanged)
-      .asObservable()
-      .withLatestFrom(segmentedControl.rx.selectedSegmentIndex)
-      .flatMap { index -> Observable<RxRealmChangeset> in
-        debugPrint(index)
-        if index == 1 {
-          return self.viewModel.favoriteMovies()
-        } else {
-          return self.viewModel.movies()
-        }
-      }
-      .debug("Movies for Segment \(segmentedControl.selectedSegmentIndex)", trimOutput: true)
+
+    viewModel.movies()
+      .debug("Movie Results", trimOutput: true)
       .bind(to: tableView.rx.realmChanges(dataSource))
       .disposed(by: disposeBag)
-    
-    
-    //      .asObservable()
-    //      .do(onNext: { index in
-    //        print(index)
-    //      })
-    //      .flatMap { index -> Observable<(AnyRealmCollection<Movie>, RealmChangeset?)> in
-    //        switch index {
-    //        case 1:
-    //          return self.viewModel.favoriteMovies()
-    //        default:
-    //          return self.viewModel.movies()
-    //        }
-    //      }
-    
-    
-    //    data
-    //      .debug("Movies for Segment \(segmentedControl.selectedSegmentIndex)", trimOutput: true)
-    //      .bind(to: tableView.rx.realmChanges(dataSource))
-    //      .disposed(by: disposeBag)
-    
-    
-    //    viewModel.movies()
-    //      .debug("Movie Results", trimOutput: true)
-    //      .bind(to: tableView.rx.realmChanges(dataSource))
-    //      .disposed(by: disposeBag)
     
     
     tableView.rx.realmModelSelected(Movie.self)
       .debug("Model Selected", trimOutput: true)
       .subscribe(viewModel.viewDetailsAction.inputs)
       .disposed(by: disposeBag)
+    
+    
+    tableView.rx.itemSelected
+      .debug("Item Selected", trimOutput: true)
+      .subscribeOn(MainScheduler.instance)
+      .subscribe(onNext: { [weak self] indexPath in
+        if let cell = self?.tableView.cellForRow(at: indexPath) {
+          cell.isSelected = !cell.isSelected
+        }
+      })
+      .disposed(by: disposeBag)
+    
+    
     
   }
   
