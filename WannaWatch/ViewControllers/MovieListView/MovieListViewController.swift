@@ -38,7 +38,7 @@ class MovieListViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-
+    
     
     let dataSource = RxTableViewRealmDataSource<Movie>(
       cellIdentifier: "MovieCell",
@@ -49,19 +49,31 @@ class MovieListViewController: UIViewController {
           self.viewModel.loadMovies(forPage: self.viewModel.pagesLoaded.value + 1)
         }
     }
-
     
-    // Bind data source to tableView
+
     viewModel.movies()
       .debug("Movie Results", trimOutput: true)
       .bind(to: tableView.rx.realmChanges(dataSource))
       .disposed(by: disposeBag)
-
+    
     
     tableView.rx.realmModelSelected(Movie.self)
       .debug("Model Selected", trimOutput: true)
       .subscribe(viewModel.viewDetailsAction.inputs)
       .disposed(by: disposeBag)
+    
+    
+    tableView.rx.itemSelected
+      .debug("Item Selected", trimOutput: true)
+      .subscribeOn(MainScheduler.instance)
+      .subscribe(onNext: { [weak self] indexPath in
+        if let cell = self?.tableView.cellForRow(at: indexPath) {
+          cell.isSelected = !cell.isSelected
+        }
+      })
+      .disposed(by: disposeBag)
+    
+    
     
   }
   

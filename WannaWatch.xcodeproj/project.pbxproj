@@ -22,6 +22,7 @@
 		06397AC51F78CAAE00F43431 /* SceneTransitionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06397AC41F78CAAE00F43431 /* SceneTransitionType.swift */; };
 		06397AC71F78D3E600F43431 /* SceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06397AC61F78D3E600F43431 /* SceneCoordinator.swift */; };
 		063B3C561F76608D00D9DAE6 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063B3C551F76608D00D9DAE6 /* MovieService.swift */; };
+		064281AF1F83605900361D37 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064281AE1F83605900361D37 /* User.swift */; };
 		0697A7C61F6DFAD800BE78DB /* MovieListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0697A7C51F6DFAD800BE78DB /* MovieListTableViewCell.swift */; };
 		0697A7C91F6DFCD300BE78DB /* RequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0697A7C81F6DFCD300BE78DB /* RequestRouter.swift */; };
 		0697A7CC1F6E3E5E00BE78DB /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0697A7CB1F6E3E5E00BE78DB /* MainTabBarController.swift */; };
@@ -62,6 +63,7 @@
 		06397AC41F78CAAE00F43431 /* SceneTransitionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneTransitionType.swift; sourceTree = "<group>"; };
 		06397AC61F78D3E600F43431 /* SceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinator.swift; sourceTree = "<group>"; };
 		063B3C551F76608D00D9DAE6 /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
+		064281AE1F83605900361D37 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0697A7C51F6DFAD800BE78DB /* MovieListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListTableViewCell.swift; sourceTree = "<group>"; };
 		0697A7C81F6DFCD300BE78DB /* RequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestRouter.swift; sourceTree = "<group>"; };
 		0697A7CB1F6E3E5E00BE78DB /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				06D3C6641F68D00700AF38D8 /* Movie.swift */,
+				064281AE1F83605900361D37 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -531,6 +534,7 @@
 				06D3C6651F68D00700AF38D8 /* Movie.swift in Sources */,
 				062DEA541F78A17E0069DEB7 /* MovieDetailViewViewModel.swift in Sources */,
 				0697A7C61F6DFAD800BE78DB /* MovieListTableViewCell.swift in Sources */,
+				064281AF1F83605900361D37 /* User.swift in Sources */,
 				0622138A1F7656760080EF08 /* MovieServiceType.swift in Sources */,
 				062149FF1F68BF52007497AB /* AppDelegate.swift in Sources */,
 				06397AC51F78CAAE00F43431 /* SceneTransitionType.swift in Sources */,

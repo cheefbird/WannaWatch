@@ -16,11 +16,15 @@ import SwiftyJSON
 
 class MovieService: MovieServiceType {
   
+  private(set) var currentUser: User
   
   let disposeBag = DisposeBag()
   
   
-  init() {
+  init(user: User) {
+    
+    currentUser = user
+    
     do {
       let realm = try Realm()
       if realm.objects(Movie.self).count == 0 {
@@ -48,7 +52,11 @@ class MovieService: MovieServiceType {
   func toggleFavorite(_ movie: Movie) -> Observable<Movie> {
     let result = withRealm("toggling favorite") { realm -> Observable<Movie> in
       try realm.write {
-        movie.isFavorite = !movie.isFavorite
+        if let index = currentUser.favoriteMovies.index(of: movie) {
+          currentUser.favoriteMovies.remove(objectAtIndex: index)
+        } else {
+          currentUser.favoriteMovies.append(movie)
+        }
       }
       return .just(movie)
     }

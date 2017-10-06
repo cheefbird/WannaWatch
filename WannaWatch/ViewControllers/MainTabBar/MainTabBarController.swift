@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import RealmSwift
 
 class MainTabBarController: UITabBarController {
   
   // MARK: - Properties
   
   var sceneCoordinator: SceneCoordinatorType!
+  
+  var currentUser: User!
   
   // MARK: - Life Cycle
   
@@ -21,14 +24,12 @@ class MainTabBarController: UITabBarController {
     
     delegate = self
     
+    currentUser = getCurrentUser()
+    
     sceneCoordinator = setupSceneCoordinator()
     
     setupMovieListView()
     
-  }
-  
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
   }
   
   
@@ -47,14 +48,15 @@ class MainTabBarController: UITabBarController {
         return
     }
     
-    guard var sceneCoordinator = sceneCoordinator else {
-      print("TabController Error: Unable to set sceneController")
-      return
+    guard var sceneCoordinator = sceneCoordinator,
+      currentUser != nil else {
+        print("TabController Error: Unable to set sceneController")
+        return
     }
     
     sceneCoordinator.currentViewController = movieListVC
     
-    let movieService = MovieService()
+    let movieService = MovieService(user: currentUser)
     let movieListVM = MovieListViewViewModel(
       movieService: movieService,
       sceneCoordinator: sceneCoordinator)
@@ -68,7 +70,7 @@ class MainTabBarController: UITabBarController {
   fileprivate func setupSceneCoordinator() -> SceneCoordinatorType? {
     guard let appDelegate = UIApplication.shared.delegate as? AppDelegate,
       let appWindow = appDelegate.window else {
-      return nil
+        return nil
     }
     
     return SceneCoordinator(window: appWindow)
@@ -76,11 +78,11 @@ class MainTabBarController: UITabBarController {
   }
   
   
-  // MARK: - Navigation
-  
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    
+  fileprivate func getCurrentUser() -> User {
+    let realm = try! Realm()
+    return User.currentUser(inRealm: realm)
   }
+  
 }
 
 
